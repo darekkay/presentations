@@ -1,10 +1,7 @@
----
-title: Dev Ninja Tools
----
-
 By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://devopenspace.de/)
 
 ![xkcd - is it worth it?](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)
+
 [XKCD](https://xkcd.com/1205/)
 
 ## Chrome Dev Tools
@@ -70,11 +67,9 @@ By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://dev
 - `Shift` + Right click
     - File/folder: "Copy as path"
     - Explorer: "Open command prompt here"
-
 - [Create .dotfiles](http://www.hanselman.com/blog/HowToCreateAFileWithADotPrefixInWindowsExplorer.aspx) in Windows Explorer
     - Put a dot at the end of the file name: `.gitignore.`
     - Turn on "Show file extensions"
-
 - Task bar
     - `Shift` + Left click: Open another instance
     - `Ctrl` + `Shift` + Left click: Open an instance with admin rights
