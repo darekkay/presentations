@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/examples.css">
+  <link rel="stylesheet" href="assets/css/highlight.css">
+  <title>Custom Components</title>
+</head>
+
+<body>
+  <main class="layout-column">
+    <h1>Native vs Custom Components</h1>
+
+    <h2>Basic button</h2>
+    <div>
+      <button class="btn btn-primary">Native</button>
+      <div class="btn btn-primary" tabindex="0">Custom</div>
+    </div>
+
+    <h2>Role attribute</h2>
+    <div class="btn btn-primary" tabindex="0" role="button">Custom</div>
+
+    <h2>Clickable</h2>
+    <div class="text-center">
+      <button class="btn btn-primary" onclick="alert('Clicked')">Native</button>
+      <div class="btn btn-primary" tabindex="0" onclick="alert('Clicked')">Custom</div>
+      <div>* Keyboard events may work correctly when using NVDA</div>
+    </div>
+
+    <h2>Disabled</h2>
+    <div>
+      <button class="btn btn-primary" onclick="alert('Clicked')" disabled>Native</button>
+      <div class="btn btn-primary disabled" tabindex="0" onclick="alert('Clicked')" role="button" disabled>Custom</div>
+    </div>
+
+    <pre><code class="hljs html">&lt;button class=&quot;btn btn-primary&quot;
+        onclick=&quot;...&quot;&gt;Native&lt;/button&gt;
+
+&lt;div class=&quot;btn btn-primary disabled&quot;
+     onclick=&quot;...&quot;
+     tabindex=&quot;0&quot;
+     role=&quot;button&quot;&gt;Custom&lt;/div&gt;</code></pre>
+  </main>
+
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

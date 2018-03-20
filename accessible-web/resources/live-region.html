@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/examples.css">
+  <link rel="stylesheet" href="assets/css/highlight.css">
+  <title>Live Region</title>
+  <style>
+    .live-area {
+      border: 1px solid green;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      width: 100%;
+      max-width: 450px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="layout-column">
+    <h1>Live Regions</h1>
+
+    <h2>Dynamic Content</h2>
+    <div class="live-area" id="area-dynamic"></div>
+    <button id="area-dynamic-button">Insert message</button>
+
+    <h2>Aria-Live</h2>
+    <div class="live-area" id="area-live" aria-live="polite"></div>
+    <button id="area-live-button">Insert message</button>
+    <pre><code class="hljs html">&lt;div aria-live=&quot;polite&quot;&gt;&lt;/div&gt;</code></pre>
+
+    <h2>Role</h2>
+    <div class="live-area" id="area-alert" role="alert"></div>
+    <button id="area-alert-button">Insert message</button>
+    <pre><code class="hljs html">&lt;div role=&quot;alert&quot;&gt;&lt;/div&gt;</code></pre>
+  </main>
+
+  <script>
+
+    const addEvent = id => document.getElementById(`${id}-button`).addEventListener("click", () => {
+      const areaElement = document.getElementById(id);
+      areaElement.innerText = "This is a dynamic element added at runtime.";
+    });
+
+    addEvent("area-dynamic");
+    addEvent("area-live");
+    addEvent("area-alert");
+
+  </script>
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

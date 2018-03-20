@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Accessible Web</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="Dariusz Krolikowski">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
+  <!--<link rel="stylesheet" href="css/theme/dk-light.min.css" id="theme">-->
+  <link rel="stylesheet" href="css/a11y.css">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+      <section>
+        <h2>Accessible Web</h2>
+        <h2>Barrierefreies Internet</h2>
+        <p><mark>Dariusz Krolikowski</mark></p>
+        <br>
+        <small class="float-left">
+          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+        </small>
+        <small class="float-right">
+          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+        </small>
+
+        
+        <div id="schedule"></div>
+      </section>
+
+
+      <section>
+        <h2>„Web Accessibility means that people with disabilities can use the Web.”</h2>
+        <small class="float-right">
+          <a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank" rel="noopener">w3.org</a>
+        </small>
+        
+        
+      </section>
+
+
+      <section>
+        <h2>„... the site's content is available, and its functionality can be operated, by literally
+          <mark>anyone</mark> .”</h2>
+        <small class="float-right">
+          <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">google.com</a>
+        </small>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Requirements</h2>
+        <div class="d-flex" style="justify-content: space-between">
+          <ul>
+            <li>Performance</li>
+            <li>Security</li>
+            <li>User Experience</li>
+            <li>SEO</li>
+            <li>...</li>
+            <li><mark>Accessibility</mark></li>
+          </ul>
+
+          <video class="fragment" loop="">
+            <source data-src="assets/money-rain.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>15% of the world’s population experience some form of disability.</h2>
+        <small class="float-right">
+          <a href="http://www.worldbank.org/en/topic/disability" target="_blank" rel="noopener">The World Bank</a>
+        </small>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Accessibility is "hard"</h2>
+        <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp">
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Accessibility is about <mark>equal</mark> treatment, not <mark>special</mark> treatment.</h2>
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Web Content Accessibility Guidelines (WCAG 2.0)</h2>
+        <small class="float-right">
+          <a href="https://www.w3.org/TR/WCAG20/" target="_blank" rel="noopener">w3.org/TR/WCAG20/</a>
+        </small>
+
+        
+        
+      </section>
+
+
+      <section>
+        <ul>
+          <li><mark>Principles</mark>
+            <ul>
+              <li>perceivable, operable, understandable, robust</li>
+            </ul>
+          </li>
+          <li><mark>Guidelines</mark></li>
+          <li><mark>Success Criteria</mark>
+            <ul>
+              <li> 3 levels of conformance: A < AA < AAA</li>
+            </ul>
+          </li>
+          <li><mark>Techniques</mark>
+          </li>
+        </ul>
+        
+        
+      </section>
+
+
+      <section>
+        <h2 class="monospace">a<span class="highlight-1">ccessibilit</span>y</h2>
+        <div class="h2">↓</div>
+        <div class="h2">a<span class="highlight-1">11</span>y</div>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>How do I make my site more accessible?</h2>
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Keyboard Navigation</h2>
+        <video loop="">
+          <source data-src="assets/computer-hand.mp4" type="video/mp4">
+        </video>
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Keyboard Navigation</h2>
+        <div>
+          <ul>
+            <li>Ensure a logical tab order</li>
+            <li>Don't use <code>tabindex</code> > 0</li>
+            <li>Don't remove the default focus ring</li>
+          </ul>
+          <pre><code class="hljs css">:focus {
+  outline: none; /* DON'T DO THIS */
+}</code></pre>
+        </div>
+      </section>
+
+
+      <section>
+        <h2>Do not depend on color</h2>
+        <img src="assets/color-blind.png" width="634" height="512" alt="Showcase for red-green color blindness.">
+        <div class="fragment fade-out chunk" style="bottom: 0; right: 0; height: 580px; width: 520px;"></div>
+        <div class="fragment fade-out chunk" style="bottom: 0; height: 320px; width: 100%;"></div>
+
+        
+
+        
+      </section>
+
+
+      <section data-background="#fff">
+        <h2 style="color: #979797">Color contrast</h2>
+        <p style="color: #979797">While grey on white is quite popular on the web, this text fails
+          even AA level.
+        </p>
+
+        <p class="float-left">
+          <img src="assets/contrast-chrome.png" width="232" height="310" alt="Contrast ratio rating">
+          <small style="display: block; text-align: left;">
+            <a href="https://developers.google.com/web/updates/2018/01/devtools#contrast" target="_blank" rel="noopener">
+              → Chrome 65+ </a>
+          </small>
+        </p>
+        <p class="float-right">
+          <img src="assets/contrast-ratio.png" width="482" height="136" alt="Contrast ratio rating">
+          <small style="display: block; text-align: right;">
+            <a href="http://leaverou.github.io/contrast-ratio/" target="_blank" rel="noopener">
+              → Calculate Contrast Ratio
+            </a>
+          </small>
+        </p>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Screen Reader</h2>
+        <p>User interface for visually impaired people</p>
+        <ul>
+          <li>
+            <a href="https://www.nvaccess.org/" target="_blank" rel="noopener" class="text-nowrap">NVDA</a> (Windows,
+            Open Source)
+          </li>
+          <li>
+            <a href="http://www.freedomsci.de/prod01.htm" target="_blank" rel="noopener">JAWS</a> (Windows)
+          </li>
+          <li>
+            <a href="https://www.apple.com/de/accessibility/mac/vision/" target="_blank" rel="noopener">VoiceOver</a>
+            (macOS)
+          </li>
+          <li>
+            <a href="https://wiki.gnome.org/Projects/Orca" target="_blank" rel="noopener">Orca</a> (Linux)
+          </li>
+        </ul>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Simplify navigation</h2>
+
+        <ul>
+          <li>Use
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics" target="_blank" rel="noopener">semantic elements</a>, e.g.:
+            <ul>
+              <li><code class="highlight-1">&lt;main&gt;</code> vs. <code>&lt;div id="main"&gt;</code></li>
+              <li><code class="highlight-1">&lt;nav&gt;</code> vs. <code>&lt;div id="nav"&gt;</code></li>
+
+            </ul>
+          </li>
+          <li>Use <code>H1</code>-<code>H6</code> semantically, not for styling</li>
+          <li>Consider adding <a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener">Skip
+            links</a></li>
+        </ul>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>WAI-ARIA</h2>
+        <span class="highlight-2">A</span>ccessible <span class="highlight-2">R</span>ich
+        <span class="highlight-2">I</span>nternet <span class="highlight-2">A</span>pplications<br>
+        <ul>
+          <li><code class="highlight-1">role</code>
+            <ul>
+              <li>button, dialog, list, tooltip, ...</li>
+            </ul>
+          </li>
+          <li><span class="highlight-1">State</span>
+            <ul>
+              <li>aria-expanded, aria-disabled, ...</li>
+            </ul>
+          </li>
+          <li><span class="highlight-1">Properties</span>
+            <ul>
+              <li>aria-haspopup, aria-label, ...</li>
+            </ul>
+          </li>
+        </ul>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Custom Components</h2>
+
+        <ul class="fragment">
+          <li>Prefer native over custom components</li>
+          <li>Follow <a href="https://www.w3.org/TR/wai-aria-practices-1.1/" target="_blank" rel="noopener">WAI-ARIA
+            Authoring Practices</a></li>
+          <li>No ARIA is better than wrong ARIA</li>
+        </ul>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Links vs. Buttons </h2>
+
+        <ul>
+          <li><mark>&lt;a&gt;</mark> - Link one file to another</li>
+          <li><mark>&lt;button&gt;</mark> - Trigger actions</li>
+        </ul>
+
+        <p><img src="assets/link-vs-button.png" width="587" height="202" alt="Example for using links vs buttons."></p>
+
+        <small class="float-right"><a href="" target="_blank" rel="noopener"></a></small>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Hiding elements</h2>
+        <table style="font-size: 0.78em;">
+          <thead>
+          <tr>
+            <td class="no-border"></td>
+            <td class="text-center no-border" colspan="2">
+              <mark>Screen Reader</mark>
+            </td>
+          </tr>
+          <tr>
+            <td style="border-top: none; border-left: none;">
+              <mark>View</mark>
+            </td>
+            <td class="text-center bg-highlight">Visible</td>
+            <td class="text-center bg-highlight">Hidden</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="bg-highlight">Visible</td>
+            <td class="text-center">-</td>
+            <td><code>aria-hidden="true"</code></td>
+          </tr>
+          <tr>
+            <td class="bg-highlight">Hidden</td>
+            <td><code>.sr-only</code></td>
+            <td><code>display: none;<br>visibility: hidden;</code></td>
+          </tr>
+          </tbody>
+        </table>
+        <pre class="fragment"><code class="hljs css" data-trim="">
+.sr-only {              /* From: Bootstrap 4 */
+  position:absolute;    overflow: hidden;
+  width:1px;            height:1px;
+  padding:0;            border:0;
+  clip:rect(0,0,0,0);   clip-path:inset(50%);
+  white-space:nowrap;                         }
+          </code></pre>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Labels</h2>
+        <blockquote>All non-text content that is presented to the user has a text alternative that serves the
+          equivalent purpose.
+          <small style="vertical-align: middle">&mdash;
+            <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html" target="_blank" rel="noopener">WCAG guideline 1.1.1</a>
+          </small>
+        </blockquote>
+        <ul class="fragment">
+          <li>Use <span class="highlight-1">&lt;label&gt;</span> for form elements</li>
+          <li>Use <span class="highlight-1">aria-label</span> if the label is not visible</li>
+          <li>Use <span class="highlight-1">aria-labelledby</span> if the label is visible</li>
+          <li>Use <span class="highlight-1">aria-describedby</span> for additional descriptions</li>
+        </ul>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Alt Texts</h2>
+
+        <pre><code class="hljs html">&lt;img src="dog.jpg" alt="Dog playing in meadow."&gt;
+&lt;img src="fb.png" alt=""&gt; &lt;!-- decorative image --&gt;</code></pre>
+
+        <p class="fragment">
+          <img src="assets/share-buttons.png" width="604" height="82" alt="Contrast ratio rating">
+        </p>
+
+        
+      </section>
+
+
+      <section>
+        <h2>Live Regions</h2>
+
+        <ul class="fragment">
+          <li>Announce changes at runtime
+            <ul>
+              <li><code class="highlight-1">role="alert"</code> or</li>
+              <li><code class="highlight-1">aria-live="polite|assertive"</code></li>
+            </ul>
+          </li>
+          <li>A live region has to be present before changing content</li>
+        </ul>
+
+        <small class="float-right"><a href="" target="_blank" rel="noopener"></a></small>
+
+        
+        
+      </section>
+
+
+      <section>
+        <h2>Tools</h2>
+
+        
+      </section>
+
+
+      <section>
+        <h2>pa11y</h2>
+
+        <pre><code class="hljs shell" data-trim="">
+$ npm install -g pa11y
+$ pa11y example.com
+      </code></pre>
+
+        <img class="fragment" src="assets/pa11y.png" height="256" width="990">
+
+        <pre class="fragment"><code class="hljs shell" data-trim="">
+$ npm install --save pa11y-ci
+      </code></pre>
+
+        
+        
+      </section>
+
+
+      <section>
+        <ul>
+          <li>
+            <a href="http://www.funkify.org" target="_blank" rel="noopener">Funkify</a> (Chrome Extension)
+          </li>
+          <li>
+            <a href="https://developers.google.com/web/tools/lighthouse/" target="_blank" rel="noopener">Lighthouse</a>
+            (Chrome DevTools → Audits)
+            <ul>
+              <li>Uses <a href="https://github.com/dequelabs/axe-core" target="_blank" rel="noopener">axe-core</a> under
+                the hood
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y" target="_blank" rel="noopener">eslint-plugin-jsx-a11y</a>
+          </li>
+        </ul>
+
+        
+      </section>
+
+
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
+          <li>
+            <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">Google Web Fundamentals</a>
+          </li>
+          <li>
+            <a href="https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts" target="_blank" rel="noopener">NVDA
+              Quick Reference</a></li>
+          <li>
+            <a href="javascript:(function()%7Bdocument.addEventListener('focusin'%2C%20()%20%3D%3E%20console.log(document.activeElement)%2C%20false)%3BArray.from(document.getElementsByTagName(%22iframe%22)).map(iframe%20%3D%3E%20iframe.contentWindow.document).forEach(iframeDoc%20%3D%3E%20iframeDoc.addEventListener('focusin'%2C%20()%20%3D%3E%20console.log(iframeDoc.activeElement)%2C%20false))%7D)()">Log Focus Changes</a> Bookmarklet
+            <ul>
+              <li>Drag the link onto your bookmark bar</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Accessibility doesn't just happen, you have to make it happen.</h2>
+        
+
+      </section>
+
+
+      <section style="font-size: 1.2em;">
+        <h2>Thanks for your attention!</h2>
+        <p><a href="https://darekkay.com">darekkay.com</a></p>
+        <p><a href="https://github.com/darekkay/presentations" class="text-nowrap">
+          <span class="highlight-3">github.com</span>
+          <span> / </span>
+          <span class="highlight-2">darekkay</span>
+          <span> / </span>
+          <span class="highlight-1">presentations</span>
+        </a></p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      controlsTutorial: false,
+      autoPlayMedia: true,
+
+      transition: 'none', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        {
+          src: 'js/classList.min.js', condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/schedule/schedule.js', async: true }
+      ]
+    });
+
+  </script>
+
+</body>
+</html>

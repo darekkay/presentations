@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/examples.css">
+  <title>Accessible Example</title>
+</head>
+
+<body class="example-good">
+  <header>
+    <!-- NOTE: The text alternative for this image of text contains the words that are displayed in the image -->
+    <img id="logo" src="assets/img/banner.jpg" alt="Cow Daily">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Archive</a>
+      <a href="#">About Us</a>
+      <button class="btn btn-primary">Sign Up</button>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+
+    <h1>Cow News</h1>
+
+    <p class="lorem">In laboratory studies, young cattle are able to memorize the locations of several food sources and retain this memory for at least 8 hours, although this declined after 12 hours. Fifteen-month-old heifers learn more quickly than
+      <a href="#">adult cows</a> which have had either one or two calvings, but their longer-term memory is less stable. Mature cattle perform well in spatial learning tasks and have a good long-term memory in these tests. Cattle tested in a radial arm maze are able to remember the locations of high-quality food for at least 30 days. Although they initially learn to avoid low-quality food, this memory diminishes over the same duration.
+    </p>
+
+    <div class="row mb-4">
+      <div class="col-12 col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/article-1.jpg" width="250" height="166" alt="">
+          <div class="card-body">
+            <h2 class="card-title">What type are you?</h2>
+            <p class="card-text">Take this free personality test in just 10 minutes.</p>
+            <a href="#">Personality test</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/article-2.jpg" width="250" height="166" alt="">
+          <div class="card-body">
+            <h2 class="card-title">Hair Trends 2018</h2>
+            <p class="card-text">Become the coolest cow on the pasture!</p>
+            <a href="#">Hair trends</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4">
+        <div class="card">
+          <img class="card-img-top" src="assets/img/article-3.jpg" width="250" height="166" alt="">
+          <div class="card-body">
+            <h2 class="card-title">Trouble in the hood</h2>
+            <p class="card-text">8 ways to deal with neighbors from hell.</p>
+            <a href="#">Deal with your neighbors</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Cow Ipsum</h2>
+    <p>Chocolate milk lorem ipsum dolor sit amet, consectetur cow elit. Aliquid deleniti earum eligendi hic, in inventore ipsum iste molestiae nam natus nemo nostrum, odio perspiciatis quasi quisquam quo sapiente ut veriLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum ex eget quam varius, vel tincidunt ligula placerat. Cras interdum felis in diam ullamcorper egestas pellentesque id dolor. Nulla ut erat metus. In porta accumsan blandit. Nullam varius neque a diam iaculis ullamcorper. Morbi consectetur ante non porttitor finibus. Quisque at aliquam nunc. Fusce sodales elit purus, ac pulvinar sem iaculis sit amet. In molestie eros id scelerisque efficitur. In auctor nibh eget lobortis commodo.</p>
+
+    <img class="joke" src="assets/img/coward.jpg" width="900" height="285" alt="Why was the cow so scared? Because he was a cow-ard.">
+
+    <h2>Music Charts</h2>
+    <ol>
+      <li>Foo Fighters - For All the Cows</li>
+      <li>Aerosmith - Milk Cow Blues</li>
+      <li>Elton John - Poor Cow</li>
+      <li>Crowded House - Sacred Cow</li>
+      <li>Snow Patrol - Holy Cow</li>
+      <li>The Turtles - Can't You Hear the Cows</li>
+      <li>Seals and Crofts - Cows of Gladness</li>
+    </ol>
+
+    <h2>What does the cow say?</h2>
+    <div class="sr-only">Hi, I'm Steve!</div>
+    <pre class="cow contrast" aria-hidden="true">  ______________
+&lt; Hi, I'm Steve! &gt;
+  --------------
+         \   ^__^
+          \  (oo)\_______
+             (__)\       )\/\
+                 ||----w |
+                 ||     ||
+    </pre>
+
+    <h2>Subscribe to our Newsletter</h2>
+    <form class="newsletter card p-4">
+      <fieldset>
+        <legend>Newsletter frequency</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="newsletter" id="newsletter-weekly" value="weekly">
+          <!-- NOTE: Label not associated with form input -->
+          <label class="form-check-label mr-5" for="newsletter-weekly">
+            Weekly
+          </label>
+          <input class="form-check-input" type="radio" name="newsletter" id="newsletter-monthly" value="monthly">
+          <label class="form-check-label" for="newsletter-monthly">
+            Monthly
+          </label>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="input-email">Email address</label>
+          <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </fieldset>
+    </form>
+
+  </main>
+
+  <div class="footer-spacer"></div>
+
+  <footer>
+    <div>Handmade with ♥ by <a href="https://darekkay.com" target="_blank">Darek Kay</a></div>
+  </footer>
+</body>
+
+</html>

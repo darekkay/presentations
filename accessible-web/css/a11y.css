@@ -1,0 +1,14 @@
+.reveal .btn {
+  display: inline-block;
+  color: white;
+  background-color: #006aff;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.reveal .btn[disabled] {
+  background-color: grey;
+}

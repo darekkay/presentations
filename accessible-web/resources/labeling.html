@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/examples.css">
+  <link rel="stylesheet" href="assets/css/highlight.css">
+  <title>Labeling</title>
+  <style>
+    label { font-weight: bold }
+  </style>
+</head>
+
+<body>
+  <main class="layout-column">
+    <h1>Labeling</h1>
+
+    <section>
+      <label>No Label</label>
+      <input class="form-control">
+    </section>
+
+    <section>
+      <label for="html-label">HTML Label</label>
+      <input id="html-label" class="form-control">
+
+      <pre><code class="hljs html">&lt;label for=&quot;html-label&quot;&gt;HTML Label&lt;/label&gt;
+&lt;input id=&quot;html-label&quot;&gt;</code></pre>
+    </section>
+
+    <section>
+      <label>Placeholder</label>
+      <input class="form-control" placeholder="Placeholder">
+
+      <pre><code class="hljs html">&lt;input placeholder=&quot;Placeholder&quot;&gt;</code></pre>
+    </section>
+
+    <section>
+      <label>aria-label</label>
+      <input class="form-control" aria-label="Aria Label">
+
+      <pre><code class="hljs html">&lt;input aria-label=&quot;Aria Label&quot;&gt;</code></pre>
+    </section>
+
+    <section>
+      <label id="labelledby">aria-labelledby</label>
+      <input class="form-control" aria-labelledby="labelledby">
+
+      <pre><code class="hljs html">&lt;label id=&quot;labelledby&quot;&gt;aria-labelledby&lt;/label&gt;
+&lt;input aria-labelledby=&quot;labelledby&quot;&gt;</code></pre>
+    </section>
+
+    <section>
+      <label id="describedby">aria-describedby</label>
+      <input class="form-control" aria-describedby="describedby">
+      <br>
+      <input class="form-control" aria-label="Aria Label" aria-describedby="describedby">
+
+      <pre><code class="hljs html">&lt;label id=&quot;describedby&quot;&gt;aria-describedby&lt;/label&gt;
+&lt;input aria-describedby=&quot;describedby&quot;&gt;
+&lt;input aria-describedby=&quot;describedby&quot;
+       aria-label=&quot;Aria Label&quot;&gt;</code></pre>
+    </section>
+
+    <section>
+      <label>.sr-only</label>
+      <div>
+        <button><span class="sr-only">Close</span> X</button>
+        <button aria-label="Close">X</button>
+      </div>
+
+      <pre><code class="hljs html">&lt;button&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt; X&lt;/button&gt;
+&lt;button aria-label=&quot;Close&quot;&gt;X&lt;/button&gt;</code></pre>
+    </section>
+
+  </main>
+
+  <script src="assets/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
