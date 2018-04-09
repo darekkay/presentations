@@ -47,7 +47,7 @@
 
 
       <section>
-        <h2>„Web Accessibility means that people with disabilities can use the Web.”</h2>
+        <h2>„Web Accessibility means that people with <mark>disabilities</mark> can use the Web.”</h2>
         <small class="float-right">
           <a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank" rel="noopener">w3.org</a>
         </small>
@@ -103,9 +103,18 @@
 
       <section>
         <h2>Accessibility is "hard"</h2>
-        <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp">
+        <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp" class="border">
 
         
+        
+      </section>
+
+
+      <section>
+        <h2>Different Preconditions</h2>
+        <video loop="">
+          <source data-src="assets/monkey-computer.mp4" type="video/mp4">
+        </video>
         
       </section>
 
@@ -167,8 +176,20 @@
 
 
       <section>
+        <h2>Disabilities</h2>
+        <ul class="h3">
+          <li>Motor disabilities</li>
+          <li>Deafness</li>
+          <li>Blindness / Low vision</li>
+          <li>Cognitive disabilities</li>
+        </ul>
+        
+      </section>
+
+
+      <section>
         <h2>Keyboard Navigation</h2>
-        <video loop="">
+        <video class="border" loop="">
           <source data-src="assets/computer-hand.mp4" type="video/mp4">
         </video>
         
@@ -402,7 +423,7 @@
 
 
       <section>
-        <h2>Alt Texts</h2>
+        <h2>Alternative Texts</h2>
 
         <pre><code class="hljs html">&lt;img src="dog.jpg" alt="Dog playing in meadow."&gt;
 &lt;img src="fb.png" alt=""&gt; &lt;!-- decorative image --&gt;</code></pre>
@@ -488,6 +509,7 @@ $ npm install --save pa11y-ci
         <h2>Resources</h2>
         <ul>
           <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
+          <li><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank" rel="noopener">WCAG Checklist</a></li>
           <li>
             <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">Google Web Fundamentals</a>
           </li>
@@ -506,9 +528,8 @@ $ npm install --save pa11y-ci
 
 
       <section>
-        <h2>Accessibility doesn't just happen, you have to make it happen.</h2>
+        <h2>Accessibility doesn't just happen, <mark>you</mark> have to make it happen.</h2>
         
-
       </section>
 
 
@@ -534,7 +555,7 @@ $ npm install --save pa11y-ci
 
     // More info https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-      controls: true,
+      controls: false,
       progress: true,
       history: true,
       center: true,
