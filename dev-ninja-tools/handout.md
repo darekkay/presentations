@@ -108,6 +108,7 @@ By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://dev
 - [ConEmu](https://conemu.github.io/)
     - Tabbed console emulator
     - Enhances default Windows command (selection, `Ctrl` + `V`)
+    - Clickable URLs (`Ctrl` + Click)
 - [Launchy](https://www.launchy.net/)
 - [Ditto](http://ditto-cp.sourceforge.net/)
 - [XYplorer](https://www.xyplorer.com/)
