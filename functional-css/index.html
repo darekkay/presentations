@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Dariusz Krolikowski">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <title>Functional CSS</title>
+
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/dk-light.min.css" id="theme">
+
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h2>Functional CSS</h2>
+        <p><mark>Dariusz Krolikowski</mark></p>
+        <br>
+        <small class="float-left">
+          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+        </small>
+        <small class="float-right">
+          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+        </small>
+
+        
+        <div id="schedule"></div>
+      </section>
+
+<section class="slide level2">
+
+<p><img data-src="assets/css-awesome.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/good-css.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="reusability" class="slide level2">
+<h2>Reusability</h2>
+<p><img data-src="assets/reusability.png"></p>
+
+</section>
+<section id="adaptability" class="slide level2">
+<h2>Adaptability</h2>
+<div class="fragment">
+<p><video loop=""> <source data-src="assets/css-bears.mp4" type="video/mp4"> </video></p>
+</div>
+
+</section>
+<section id="readability" class="slide level2">
+<h2>Readability</h2>
+
+</section>
+<section id="scalability" class="slide level2">
+<h2>Scalability</h2>
+
+</section>
+<section id="performance" class="slide level2">
+<h2>Performance</h2>
+<p><img data-src="assets/performance.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="maintainability" class="slide level2">
+<h2>Maintainability</h2>
+<ul>
+<li>Reusability</li>
+<li>Adaptability</li>
+<li>Readability</li>
+<li>Scalability</li>
+<li>Performance</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="methodologies" class="slide level2">
+<h2>Methodologies</h2>
+<ul>
+<li><a href="http://getbem.com" target="_blank" rel="noopener">BEM</a> (Blocks, Elements, Modifiers)</li>
+<li><a href="http://smacss.com/" target="_blank" rel="noopener">SMACSS</a> (Scalable and Modular Architecture for CSS)</li>
+<li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank" rel="noopener">OOCSS</a> (Object-Oriented CSS)
+</li><li class="fragment highlight-1">
+Functional CSS
+</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="bem" class="slide level2">
+<h2>BEM</h2>
+<ul>
+<li><strong>Block</strong>: Standalone entity.</li>
+<li><strong>Element</strong>: A part of a block.</li>
+<li><strong>Modifier</strong>: A flag on a block or element.</li>
+</ul>
+<div class="fragment">
+<pre class="css"><code>.block {}
+.block__element {}
+.block__element--modifier {}</code></pre>
+</div>
+<div class="fragment">
+<pre class="html"><code>&lt;form class=&quot;form&quot;&gt;
+  &lt;input class=&quot;form__input form__input--disabled&quot; /&gt;
+&lt;/form&gt;</code></pre>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/author-bio.jpg"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/author-bio-bem.jpg"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/bio-and-article.jpg"></p>
+<div class="fragment">
+<p>Reusable and adaptable</p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="duplicate-styles" class="slide level2">
+<h2>1. Duplicate styles</h2>
+<pre><code>.article-preview
+  .article-preview__image
+  .article-preview__content
+    .article-preview__title
+    .article-preview__body</code></pre>
+<ul>
+<li><span class="green">✓</span> Adaptable</li>
+<li><span class="red">✗</span> Not reusable, not DRY*</li>
+</ul>
+<p><small class="float-right">* Don’t Repeat Yourself</small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="css-preprocessor" class="slide level2">
+<h2>2. CSS Preprocessor</h2>
+<p><span class="citation" data-cites="extend">@extend</span> or mixin</p>
+<pre class="sass"><code>.article-preview          { @extend .author-bio; }
+.article-preview__image   { @extend .author-bio__image; }
+.article-preview__content { @extend .author-bio__content; }
+.article-preview__title   { @extend .author-bio__name; }
+.article-preview__body    { @extend .author-bio__body; }</code></pre>
+<ul>
+<li><span class="orange">?</span> Adaptable</li>
+<li><span class="orange">?</span> Reusable</li>
+<li><span class="red">✗</span> Maintainable</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="content-agnostic-component" class="slide level2">
+<h2>3. Content-agnostic component</h2>
+<pre><code>.media-card
+  .media-card__image
+  .media-card__content
+    .media-card__title
+    .media-card__body</code></pre>
+<ul>
+<li><span class="green">✓</span> Reusable, DRY</li>
+<li><span class="orange">?</span> Adaptable</li>
+<li><span class="red">?</span> <strong>Semantic?</strong></li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="semantics" class="slide level2">
+<h2>Semantics</h2>
+<p>CSS semantics are for <strong>developers</strong>.</p>
+<pre class="html"><code>&lt;div id=&quot;article&quot;&gt;
+  &lt;div class=&quot;headline&quot;&gt;Animal sounds&lt;/div&gt;
+  &lt;div&gt;The cow goes &lt;div class=&quot;bold&quot;&gt;moo&lt;/div&gt;.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>HTML semantics are for <strong>users</strong>.</p>
+<pre class="html"><code>&lt;article&gt;
+  &lt;h1&gt;Animal sounds&lt;/h1&gt;
+  &lt;p&gt;The cow goes &lt;strong&gt;moo&lt;/strong&gt;.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<pre class="css"><code>.bold        { font-weight: bold; } /* presentational */
+.author-name { font-weight: bold; } /* semantic */</code></pre>
+<blockquote>
+<p>“[…] authors are encouraged to use values that describe the nature of the content, rather than values that describe the desired presentation of the content.”</p>
+</blockquote>
+<p><small class="float-right"><a href="https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#classes" target="_blank" rel="noopener">w3.org</a></small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="separation-of-concerns" class="slide level2">
+<h2>Separation of Concerns?</h2>
+<p><img data-src="assets/html-css-js-connected.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<div class="d-flex font-3">
+<div>
+<h3 id="semantic-classnames">“Semantic” classnames</h3>
+<p>“Separation of concerns”</p>
+<p><span class="highlight-1">HTML is restyleable!</span></p>
+<p><span class="highlight-4">CSS depends on HTML</span></p>
+</div>
+<div>
+<h3 id="presentational-classnames">Presentational classnames</h3>
+<p>“Mixing concerns”</p>
+<p><span class="highlight-1">CSS is reusable!</span></p>
+<p><span class="highlight-4">HTML depends on CSS</span></p>
+</div>
+</div>
+<div class="fragment highlight-3">
+<p>Neither approach is “wrong”.</p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<blockquote>
+<p>“For individuals weaned on an ideology where ‘Semantic HTML’ means using content-derived class names, it usually requires you to work on a large application before you become aware of the impractical nature of that approach.”</p>
+</blockquote>
+<p><small class="float-right"><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank" rel="noopener">Nicolas Gallagher</a></small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="functional-css" class="slide level2">
+<h2>Functional CSS</h2>
+<div class="fragment">
+<blockquote>
+<p>“… is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.”</p>
+</blockquote>
+</div>
+<div class="fragment">
+<p>Also known as</p>
+<ul>
+<li>Atomic CSS (≠ <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener">Atomic Design</a>)</li>
+<li>Utility-first CSS</li>
+</ul>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<pre class="css"><code>.position-relative { position: relative }
+.display-block     { display: block }
+.border            { border: 1px solid #ccc }
+.text-center       { text-align: center}
+.font-weight-bold  { font-weight: bold }
+.red               { color: red }</code></pre>
+<div class="fragment">
+<pre class="css"><code>.font-16           { font-size: 16px }
+.font-20           { font-size: 20px }
+.font-28           { font-size: 28px }</code></pre>
+</div>
+<div class="fragment">
+<pre class="css"><code>.margin-1          { margin: 0.5rem }
+.margin-2          { margin: 1rem }
+.margin-3          { margin: 2rem }
+.margin-x-2        { margin-left: 1rem; margin-right: 1rem; }</code></pre>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="wait-what" class="slide level2">
+<h2>Wait, <em>what</em>?</h2>
+<video loop="">
+<source data-src="assets/malcolm-reynolds.mp4" type="video/mp4">
+</video>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/bio-and-article.jpg"></p>
+<ul>
+<li>Reusable</li>
+<li>Adaptable</li>
+</ul>
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/bio-and-article-acss.jpg"></p>
+<ul>
+<li><span class="green">✓</span> Reusable</li>
+<li><span class="green">✓</span> Adaptable</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="functional-css-1" class="slide level2">
+<h2><span class="highlight-1">Functional</span> CSS</h2>
+<ul>
+<li>Immutable</li>
+<li>Predictable</li>
+<li>Pure (no side effects)</li>
+<li>Composable</li>
+</ul>
+<p>Favors composition over inheritance</p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/attention.jpg"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="issue-side-effects" class="slide level2">
+<h2>Issue: Side effects</h2>
+<p><img data-src="assets/side-effects.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="no-side-effects" class="slide level2">
+<h2>No side effects</h2>
+<p><img data-src="assets/no-side-effects.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="productivity-boost" class="slide level2">
+<h2>Productivity Boost</h2>
+<div class="fragment">
+<p><video> <source data-src="assets/tailwind-css.mp4" type="video/mp4"> </video></p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p>The older your codebase is</p>
+<p>the <strong>less CSS</strong> you will write</p>
+<div class="fragment">
+<p><img data-src="assets/no-problem.jpg"></p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="naming-is-hard" class="slide level2">
+<h2>Naming is hard</h2>
+<blockquote>
+<p>There are 2 hard problems in computer science: cache invalidation, <strong>naming things</strong>, and off-by-1 errors.</p>
+</blockquote>
+<p>Naming utility classes is straightforward.</p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="naming-schema" class="slide level2">
+<h2>Naming schema</h2>
+<p>Longhand: favors <strong>readability</strong></p>
+<pre class="css"><code>.font-large   { font-size: 3rem }
+.margin-top-0 { margin-top: 0 }</code></pre>
+<div class="fragment">
+<p>Shorthand: favors <strong>brevity</strong></p>
+<pre class="css"><code>.f1   { font-size: 3rem }
+.mt-0 { margin-top: 0 }</code></pre>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<pre class="html"><code>&lt;div class=&quot;profile-wrapper&quot;&gt;
+  &lt;div class=&quot;profile-wrapper__name&quot;&gt;Alex&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;flex&quot;&gt;
+  &lt;div class=&quot;flex-1&quot;&gt;Alex&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<blockquote>
+<p>“My biggest argument is not having to name every thing. You know how many times I’ve had to think of a name for a random container that exists <strong>simply to align some crap</strong>?”</p>
+</blockquote>
+<p><small class="float-right"><a href="https://news.ycombinator.com/item?id=18085013" target="_blank" rel="noopener">Hacker News</a></small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="portability" class="slide level2">
+<h2>Portability</h2>
+<ul>
+<li>Custom spacing, typography, colors and breakpoints per project</li>
+<li>Same CSS classes for every project</li>
+<li>Cross-team consistency</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/mythbusters.jpg"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="its-just-inline-styles" class="slide level2">
+<h2>“It’s just inline styles”</h2>
+<pre class="html"><code>&lt;h2 style=&quot;font-size: 16px; font-weight: bold; color: purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<pre class="html"><code>&lt;h2 class=&quot;font-16 font-bold font-purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<div class="fragment">
+<ul>
+<li>Specifity</li>
+<li>1 to 1 (inline) vs. 1 to many (classes)</li>
+<li>Media queries, pseudo elements</li>
+<li>Inconsistencies</li>
+</ul>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="media-queries" class="slide level2">
+<h2>Media Queries</h2>
+<ul>
+<li>Flexbox container</li>
+<li>Column direction on mobile</li>
+<li>Row direction on desktop</li>
+</ul>
+<pre class="html"><code>&lt;div class=&quot;flex flex-column flex-md-row&quot;&gt;
+  &lt;div&gt;Element 1&lt;/div&gt;
+  &lt;div&gt;Element 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="maintainability-1" class="slide level2">
+<h2>Maintainability</h2>
+<div class="highlight-4">
+<em>“Turn all red buttons blue”</em>
+</div>
+<ul>
+<li>Use templates</li>
+<li>Search and replace</li>
+<li>Extract common components (<code>.btn</code>, <code>.modal</code>)</li>
+</ul>
+<div class="fragment">
+<pre class="ejs"><code>&lt;button class=&quot;bg-blue-500 hover:bg-blue-700 text-white
+               font-bold py-2 px-4 rounded&quot;&gt;
+  &lt;%= label %&gt;
+  &lt;% if (icon) { %&gt;
+    &lt;%= icon %&gt;
+  &lt;% } %&gt;
+&lt;/button&gt;</code></pre>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="utility-first" class="slide level2">
+<h2>Utility-<em>first</em></h2>
+<ul>
+<li>No more premature abstraction</li>
+<li>No unnecessary bloat and complexity</li>
+<li>Mix with other methodologies</li>
+<li>TailwindCSS <a href="https://tailwindcss.com/docs/extracting-components/#extracting-css-components-with-apply" target="_blank" rel="noopener">@apply</a>:</li>
+</ul>
+<pre class="html"><code>&lt;button class=&quot;btn-blue&quot;&gt;Button&lt;/button&gt;
+
+&lt;style&gt;
+  .btn-blue {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+  }
+&lt;/style&gt;
+</code></pre>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="html-bloat" class="slide level2">
+<h2>HTML bloat</h2>
+<pre class="html"><code>&lt;div class=&quot;mt-4 md:mt-0 md:ml-6 w-64&quot;&gt;
+  &lt;h3 class=&quot;uppercase tracking-wide text-sm text-indigo-600&quot;&gt;
+    Marketing
+  &lt;/h3&gt;
+  &lt;a href=&quot;/pricing.html&quot;
+     class=&quot;block mt-1 text-lg leading-tight font-semibold
+            text-gray-900 hover:underline&quot;&gt;Pricing&lt;/a&gt;
+  &lt;p class=&quot;mt-2 text-gray-600&quot;&gt;
+    Get the best offer for your business
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<div class="fragment">
+<ul>
+<li>“It’s ugly”</li>
+<li>“It’s bloated”</li>
+<li>“It’s unreadable”</li>
+</ul>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="theming" class="slide level2">
+<h2>Theming</h2>
+<ul>
+<li><code>.margin-20</code> <span class="fragment highlight-1"> → <code>.margin-3</code></span></li>
+<li><code>.font-16</code> <span class="fragment highlight-2"> → <code>.font-3</code> / <code>.font-medium</code></span></li>
+<li><code>.color-blue</code> <span class="fragment highlight-4"> → <code>.color-primary</code></span></li>
+</ul>
+<div class="fragment">
+<p>Use abstract over absolute units</p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="learning-curve" class="slide level2">
+<h2>Learning curve</h2>
+<ul>
+<li>Every methodology requires a style guide</li>
+<li>Functional classes are self-describing</li>
+<li>Cross-team knowledge</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="performance-1" class="slide level2">
+<h2>Performance</h2>
+<ul>
+<li>Avoid expensive selectors</li>
+</ul>
+<pre class="css"><code>header#admin-main-header.header--bar-right-part li &gt; a {
+  line-height: 35px;
+}
+
+.line-height-2 { line-height: 35px; }</code></pre>
+<div class="fragment">
+<ul>
+<li>File size <strong>over time</strong></li>
+<li>GZip compression</li>
+<li>Caching</li>
+</ul>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="unused-css" class="slide level2">
+<h2>Unused CSS</h2>
+<ul>
+<li>Import only used CSS</li>
+<li>Remove unused CSS:
+<ul>
+<li><a href="https://github.com/FullHuman/purgecss" target="_blank" rel="noopener">PurgeCSS</a>, <a href="https://github.com/purifycss/purifycss" target="_blank" rel="noopener">PurifyCSS</a>, <a href="https://github.com/uncss/uncss" target="_blank" rel="noopener">UnCSS</a>, …</li>
+</ul></li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="autocomplete" class="slide level2">
+<h2>Autocomplete</h2>
+<p>CSS <span class="highlight-1">styles</span></p>
+<p><img data-src="assets/autocomplete-css.png"></p>
+<div class="fragment">
+<p>CSS <span class="highlight-4">classes</span></p>
+<p><img data-src="assets/autocomplete-html.png"></p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="locating-and-selecting-components" class="slide level2">
+<h2>Locating and selecting components</h2>
+<p><img data-src="assets/dev-tools.png"></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="frameworks" class="slide level2">
+<h2>Frameworks</h2>
+<ul>
+<li><a href="https://tailwindcss.com" target="_blank" rel="noopener">Tailwind CSS</a></li>
+<li><a href="https://tachyons.io/" target="_blank" rel="noopener">Tachyons</a></li>
+<li><a href="https://basscss.com/" target="_blank" rel="noopener">BassCSS</a></li>
+<li><a href="http://buildwithbeard.com/" target="_blank" rel="noopener">Beard</a></li>
+<li><a href="https://getbootstrap.com/docs/4.0/utilities" target="_blank" rel="noopener">Bootstrap Utilities</a></li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="in-the-wild" class="slide level2">
+<h2>In the wild</h2>
+<ul>
+<li><a href="https://www.yahoo.com/" target="_blank" rel="noopener">Yahoo!</a></li>
+<li><a href="https://www.twitch.tv/" target="_blank" rel="noopener">Twitch</a></li>
+<li><a href="https://medium.com/" target="_blank" rel="noopener">Medium</a></li>
+<li><a href="https://www.kickstarter.com/" target="_blank" rel="noopener">Kickstarter</a></li>
+<li><a href="https://www.buzzfeed.com" target="_blank" rel="noopener">BuzzFeed</a></li>
+<li><a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia</a></li>
+<li><a href="https://www.ted.com" target="_blank" rel="noopener">TED Talks</a></li>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+<li>…</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="personal-experience" class="slide level2">
+<h2>Personal experience</h2>
+<ul>
+<li>Team’s preference for functional CSS
+<ul>
+<li>Gradual shift</li>
+</ul></li>
+<li>Utility-<em>heavy</em> usage</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p>If you love the way you write CSS and don’t want to change… <strong>then don’t</strong>.</p>
+<div class="fragment">
+<p><strong>… but</strong></p>
+<blockquote>
+<p>“You have to be prepared to disgard old ideas, look at alternatives, and even revisit ways that you may have previously dismissed.”</p>
+</blockquote>
+<p><small class="float-right"><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank" rel="noopener">Nicolas Gallagher</a></small></p>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://github.com/winkerVSbecks/awesome-functional-css" target="_blank" rel="noopener">Awesome Functional CSS</a></li>
+<li><a href="https://johnpolacek.github.io/the-case-for-atomic-css/" target="_blank" rel="noopener">The Case for Atomic CSS</a></li>
+</ul>
+
+</section>
+
+      <section style="font-size: 1.2em;">
+        <h2 style="padding-bottom: 25px;">Thank you!</h2>
+        <p style="padding-bottom: 20px;">
+          <a href="https://github.com/darekkay/presentations" class="text-nowrap">
+            <span class="highlight-3">github.com</span>
+            <span> / </span>
+            <span class="highlight-2">darekkay</span>
+            <span> / </span>
+            <span class="highlight-1">presentations</span>
+          </a>
+        </p>
+        <p>Dariusz Krolikowski</p>
+        <small class="float-left">
+          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+        </small>
+        <small class="float-right">
+          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+        </small>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+
+  <script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: false,
+      progress: true,
+      history: true,
+      center: true,
+      controlsTutorial: false,
+      autoPlayMedia: true,
+
+      transition: "none", // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        {
+          src: "js/classList.min.js", condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: "plugin/highlight/highlight.js", async: true, callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        { src: "plugin/notes/notes.js", async: true },
+        { src: "plugin/schedule/schedule.js", async: true }
+      ]
+    });
+
+  </script>
+  </body>
+</html>

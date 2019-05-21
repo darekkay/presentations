@@ -1,5 +1,11 @@
 # Presentations
 
+## Functional CSS
+
+ - [Slides](https://darekkay.github.io/presentations/functional-css/index.html)
+
+Functional CSS (also known as _Atomic CSS_ or _Utility-first CSS_) is an approach to CSS architecture that favors small, single-purpose classes with names based on visual function. In this talk, I explain some issues coming from traditional, semantic-based methodologies (e.g. BEM) and how Functional CSS is able solve them.
+
 ## Accessible Web
 
  - [Slides](https://darekkay.github.io/presentations/accessible-web/index.html)
