@@ -1,4 +1,4 @@
-By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://devopenspace.de/)
+By [Dariusz Krolikowski](https://darekkay.com), first presented at [DevOpenSpace 2017](http://devopenspace.de/)
 
 ![xkcd - is it worth it?](https://imgs.xkcd.com/comics/is_it_worth_the_time.png)
 
@@ -19,6 +19,9 @@ By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://dev
 - [DevTools snippets](https://umaar.com/dev-tips/141-quick-open-menu-snippets/)
     - Alternative to bookmarklets
 - [Throttle CPU](https://umaar.com/dev-tips/88-cpu-throttling/) / Simulate 3G Network
+- Capture full site screenshot:
+    - Open Command Menu: Ctrl + Shift + P
+    - `Capture full size screenshot`
 
 ## Bookmarklets / Browser Addons
 
@@ -35,8 +38,9 @@ By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://dev
 ## Text Snippets
 
 - Tools:
-    - [PhraseExpress](http://www.phraseexpress.com/)
-    - [Textbausteine Plus](http://www.sirat-it.de/TextbausteinePlus)
+    - [PhraseExpress](http://www.phraseexpress.com/) (Windows, macOS)
+    - [Textbausteine Plus](http://www.sirat-it.de/) (Windows)
+    - [WriteYours](http://amlpages.com/writeyours.shtml) (Windows)
 - Use cases:
     - salutation (`sgdh`)
     - form data (name, e-mail, phone number)
@@ -54,6 +58,13 @@ By [Dariusz Krolikowski](https://darekkay.com) at [DevOpenSpace 2017](http://dev
     - Multiplication: `ul>li.list-item*10`
     - Lorem Ipsum: `lorem`
 - Available for [most editors](https://emmet.io/download/) natively or as a plugin
+- Enable for JSX/React in VSCode:
+
+```json
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+     },
+```
 
 ## API Documentation Browsers
 
