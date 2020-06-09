@@ -1,16 +1,16 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Dariusz Krolikowski">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Functional CSS</title>
 
   <link rel="stylesheet" href="css/reveal.min.css">
-  <link rel="stylesheet" href="css/theme/dk-light.min.css" id="theme">
+  <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
 
   <!--[if lt IE 9]>
   <script src="js/html5shiv.min.js"></script>
@@ -21,13 +21,15 @@
     <div class="slides">
 
       <section>
-        <h2>Functional CSS</h2>
-        <p><mark>Dariusz Krolikowski</mark></p>
-        <br>
-        <small class="float-left">
+        <h1>Functional CSS</h1>
+        <h2 class="h3">What's all the hype about?</h2>
+        <p style="margin-bottom: 40px;"><mark>Dariusz Krolikowski</mark></p>
+        <small class="d-flex flex-col align-center float-left">
+          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
           <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
         </small>
-        <small class="float-right">
+        <small class="d-flex flex-col align-center float-right">
+          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
           <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
         </small>
 
@@ -54,17 +56,21 @@
 </section>
 <section id="adaptability" class="slide level2">
 <h2>Adaptability</h2>
-<div class="fragment">
-<p><video loop=""> <source data-src="assets/css-bears.mp4" type="video/mp4"> </video></p>
-</div>
+<video loop="">
+<source data-src="assets/css-bears.mp4" type="video/mp4">
+</video>
 
 </section>
 <section id="readability" class="slide level2">
 <h2>Readability</h2>
+<p><img data-src="assets/readability.png"></p>
 
 </section>
 <section id="scalability" class="slide level2">
 <h2>Scalability</h2>
+<svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="150" style="margin-top: 20px">
+<path fill="currentColor" d="M117.65 277.65c6.25 6.25 16.38 6.25 22.63 0L192 225.94l84.69 84.69c6.25 6.25 16.38 6.25 22.63 0L409.54 200.4l29.49 29.5c15.12 15.12 40.97 4.41 40.97-16.97V112c0-8.84-7.16-16-16-16H363.07c-21.38 0-32.09 25.85-16.97 40.97l29.5 29.49-87.6 87.6-84.69-84.69c-6.25-6.25-16.38-6.25-22.63 0l-74.34 74.34c-6.25 6.25-6.25 16.38 0 22.63l11.31 11.31zM496 400H48V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16z"></path>
+</svg>
 
 </section>
 <section id="performance" class="slide level2">
@@ -105,16 +111,12 @@ Functional CSS
 <li><strong>Element</strong>: A part of a block.</li>
 <li><strong>Modifier</strong>: A flag on a block or element.</li>
 </ul>
-<div class="fragment">
 <pre class="css"><code>.block {}
 .block__element {}
 .block__element--modifier {}</code></pre>
-</div>
-<div class="fragment">
 <pre class="html"><code>&lt;form class=&quot;form&quot;&gt;
   &lt;input class=&quot;form__input form__input--disabled&quot; /&gt;
 &lt;/form&gt;</code></pre>
-</div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -132,7 +134,7 @@ Functional CSS
 </section>
 <section class="slide level2">
 
-<p><img data-src="assets/bio-and-article.jpg"></p>
+<p><img data-src="assets/bio-and-article-bem.jpg"></p>
 <div class="fragment">
 <p>Reusable and adaptable</p>
 </div>
@@ -157,7 +159,7 @@ Functional CSS
 <section id="css-preprocessor" class="slide level2">
 <h2>2. CSS Preprocessor</h2>
 <p><span class="citation" data-cites="extend">@extend</span> or mixin</p>
-<pre class="sass"><code>.article-preview          { @extend .author-bio; }
+<pre class="scss"><code>.article-preview          { @extend .author-bio; }
 .article-preview__image   { @extend .author-bio__image; }
 .article-preview__content { @extend .author-bio__content; }
 .article-preview__title   { @extend .author-bio__name; }
@@ -165,7 +167,6 @@ Functional CSS
 <ul>
 <li><span class="orange">?</span> Adaptable</li>
 <li><span class="orange">?</span> Reusable</li>
-<li><span class="red">✗</span> Maintainable</li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -185,29 +186,17 @@ Functional CSS
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="semantics" class="slide level2">
-<h2>Semantics</h2>
-<p>CSS semantics are for <strong>developers</strong>.</p>
-<pre class="html"><code>&lt;div id=&quot;article&quot;&gt;
-  &lt;div class=&quot;headline&quot;&gt;Animal sounds&lt;/div&gt;
-  &lt;div&gt;The cow goes &lt;div class=&quot;bold&quot;&gt;moo&lt;/div&gt;.&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<p>HTML semantics are for <strong>users</strong>.</p>
-<pre class="html"><code>&lt;article&gt;
-  &lt;h1&gt;Animal sounds&lt;/h1&gt;
-  &lt;p&gt;The cow goes &lt;strong&gt;moo&lt;/strong&gt;.&lt;/p&gt;
-&lt;/article&gt;</code></pre>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
-<section class="slide level2">
-
-<pre class="css"><code>.bold        { font-weight: bold; } /* presentational */
-.author-name { font-weight: bold; } /* semantic */</code></pre>
+<section id="semantic-class-names" class="slide level2">
+<h2>Semantic class names</h2>
 <blockquote>
-<p>“[…] authors are encouraged to use values that describe the nature of the content, rather than values that describe the desired presentation of the content.”</p>
+<p>“[…] authors are encouraged to use values that describe the <span class="highlight-1"><strong>nature of the content</strong></span>, rather than values that describe the desired <span class="highlight-2"><strong>presentation of the content</strong></span>.”</p>
 </blockquote>
 <p><small class="float-right"><a href="https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#classes" target="_blank" rel="noopener">w3.org</a></small></p>
+<p><br></p>
+<div class="clear-both fragment">
+<pre class="css"><code>.bold        { font-weight: bold }  /* presentational */
+.author-name { font-weight: bold }  /* semantic       */</code></pre>
+</div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -220,17 +209,17 @@ Functional CSS
 <section class="slide level2">
 
 <div class="d-flex font-3">
-<div>
+<div style="margin-right: 2rem;">
 <h3 id="semantic-classnames">“Semantic” classnames</h3>
-<p>“Separation of concerns”</p>
+<p><strike>“Separation of concerns”</strike></p>
+<p><span class="highlight-2">CSS depends on HTML</span></p>
 <p><span class="highlight-1">HTML is restyleable!</span></p>
-<p><span class="highlight-4">CSS depends on HTML</span></p>
 </div>
-<div>
+<div style="margin-left: 2rem;">
 <h3 id="presentational-classnames">Presentational classnames</h3>
-<p>“Mixing concerns”</p>
+<p><strike>“Mixing concerns”</strike></p>
+<p><span class="highlight-2">HTML depends on CSS</span></p>
 <p><span class="highlight-1">CSS is reusable!</span></p>
-<p><span class="highlight-4">HTML depends on CSS</span></p>
 </div>
 </div>
 <div class="fragment highlight-3">
@@ -239,20 +228,11 @@ Functional CSS
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<blockquote>
-<p>“For individuals weaned on an ideology where ‘Semantic HTML’ means using content-derived class names, it usually requires you to work on a large application before you become aware of the impractical nature of that approach.”</p>
-</blockquote>
-<p><small class="float-right"><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank" rel="noopener">Nicolas Gallagher</a></small></p>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
 <section id="functional-css" class="slide level2">
 <h2>Functional CSS</h2>
 <div class="fragment">
 <blockquote>
-<p>“… is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.”</p>
+<p>“… is the approach to CSS architecture that favors small, <span class="highlight-1">single-purpose classes</span> with names based on <span class="highlight-2">visual function</span>.”</p>
 </blockquote>
 </div>
 <div class="fragment">
@@ -282,13 +262,13 @@ Functional CSS
 <pre class="css"><code>.margin-1          { margin: 0.5rem }
 .margin-2          { margin: 1rem }
 .margin-3          { margin: 2rem }
-.margin-x-2        { margin-left: 1rem; margin-right: 1rem; }</code></pre>
+.margin-x-2        { margin-left: 1rem; margin-right: 1rem }</code></pre>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="wait-what" class="slide level2">
-<h2>Wait, <em>what</em>?</h2>
+<h2>Wait, what?</h2>
 <video loop="">
 <source data-src="assets/malcolm-reynolds.mp4" type="video/mp4">
 </video>
@@ -299,8 +279,8 @@ Functional CSS
 
 <p><img data-src="assets/bio-and-article.jpg"></p>
 <ul>
-<li>Reusable</li>
-<li>Adaptable</li>
+<li><span class="orange">?</span> Adaptable</li>
+<li><span class="orange">?</span> Reusable</li>
 </ul>
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -308,9 +288,15 @@ Functional CSS
 
 <p><img data-src="assets/bio-and-article-acss.jpg"></p>
 <ul>
-<li><span class="green">✓</span> Reusable</li>
 <li><span class="green">✓</span> Adaptable</li>
+<li><span class="green">✓</span> Reusable</li>
 </ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<p><img data-src="assets/attention.jpg"></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -328,37 +314,37 @@ Functional CSS
 </section>
 <section class="slide level2">
 
-<p><img data-src="assets/attention.jpg"></p>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
-<section id="issue-side-effects" class="slide level2">
-<h2>Issue: Side effects</h2>
+<h2 class="h3">
+<span class="highlight-1">Context switching</span> &amp; <span class="highlight-2">Side effects</span>
+</h2>
 <p><img data-src="assets/side-effects.png"></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="no-side-effects" class="slide level2">
-<h2>No side effects</h2>
+<section class="slide level2">
+
+<h2 class="h3">
+<span class="highlight-1">No context switching</span><br><span class="highlight-2">No side effects</span>
+</h2>
 <p><img data-src="assets/no-side-effects.png"></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="productivity-boost" class="slide level2">
 <h2>Productivity Boost</h2>
-<div class="fragment">
-<p><video> <source data-src="assets/tailwind-css.mp4" type="video/mp4"> </video></p>
-</div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section class="slide level2">
 
-<p>The older your codebase is</p>
-<p>the <strong>less CSS</strong> you will write</p>
-<div class="fragment">
-<p><img data-src="assets/no-problem.jpg"></p>
-</div>
+<video>
+<source data-src="assets/tailwind-css.mp4" type="video/mp4">
+</video>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="the-older-your-codebase-is-the-less-css-you-will-write" class="slide level2">
+<h2>The older your codebase is <br> the <span class="highlight-1"><strong>less CSS</strong></span> you will write</h2>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -367,19 +353,11 @@ Functional CSS
 <blockquote>
 <p>There are 2 hard problems in computer science: cache invalidation, <strong>naming things</strong>, and off-by-1 errors.</p>
 </blockquote>
-<p>Naming utility classes is straightforward.</p>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
-<section id="naming-schema" class="slide level2">
-<h2>Naming schema</h2>
-<p>Longhand: favors <strong>readability</strong></p>
-<pre class="css"><code>.font-large   { font-size: 3rem }
-.margin-top-0 { margin-top: 0 }</code></pre>
+<p><br></p>
 <div class="fragment">
-<p>Shorthand: favors <strong>brevity</strong></p>
-<pre class="css"><code>.f1   { font-size: 3rem }
-.mt-0 { margin-top: 0 }</code></pre>
+<p>Naming utility classes is straightforward.</p>
+<pre class="css"><code>.margin-top-0 { margin-top: 0 }  /* favors readability */
+.mt-0         { margin-top: 0 }  /* favors brevity     */</code></pre>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -394,9 +372,21 @@ Functional CSS
   &lt;div class=&quot;flex-1&quot;&gt;Alex&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <blockquote>
-<p>“My biggest argument is not having to name every thing. You know how many times I’ve had to think of a name for a random container that exists <strong>simply to align some crap</strong>?”</p>
+<p>“You know how many times I’ve had to think of a name for a random container that exists <strong>simply to align some crap</strong>?”</p>
 </blockquote>
 <p><small class="float-right"><a href="https://news.ycombinator.com/item?id=18085013" target="_blank" rel="noopener">Hacker News</a></small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="css-specifity-order" class="slide level2">
+<h2>CSS specifity &amp; order</h2>
+<pre class="html"><code>&lt;a class=&quot;nav-item link&quot; href=&quot;#&quot;&gt;Link&lt;/a&gt;</code></pre>
+<pre class="css"><code>.link     { color: blue }
+.nav-item { color: red }</code></pre>
+<div class="fragment">
+<p><img data-src="assets/css-specifity.png"></p>
+<p><small class="float-right"><a href="https://twitter.com/iamdevloper/status/1039997267426660353" target="_blank" rel="noopener">Twitter</a></small></p>
+</div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -416,50 +406,20 @@ Functional CSS
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="its-just-inline-styles" class="slide level2">
-<h2>“It’s just inline styles”</h2>
-<pre class="html"><code>&lt;h2 style=&quot;font-size: 16px; font-weight: bold; color: purple&quot;&gt;
-  Breaking Bad
-&lt;/h2&gt;</code></pre>
-<pre class="html"><code>&lt;h2 class=&quot;font-16 font-bold font-purple&quot;&gt;
-  Breaking Bad
-&lt;/h2&gt;</code></pre>
-<div class="fragment">
-<ul>
-<li>Specifity</li>
-<li>1 to 1 (inline) vs. 1 to many (classes)</li>
-<li>Media queries, pseudo elements</li>
-<li>Inconsistencies</li>
-</ul>
-</div>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
-<section id="media-queries" class="slide level2">
-<h2>Media Queries</h2>
-<ul>
-<li>Flexbox container</li>
-<li>Column direction on mobile</li>
-<li>Row direction on desktop</li>
-</ul>
-<pre class="html"><code>&lt;div class=&quot;flex flex-column flex-md-row&quot;&gt;
-  &lt;div&gt;Element 1&lt;/div&gt;
-  &lt;div&gt;Element 2&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-<!-- ----------------------------------------------------------------------- -->
-</section>
-<section id="maintainability-1" class="slide level2">
-<h2>Maintainability</h2>
-<div class="highlight-4">
+<section id="adaptability-1" class="slide level2">
+<h2>Adaptability</h2>
+<div class="highlight-1">
 <em>“Turn all red buttons blue”</em>
 </div>
-<ul>
-<li>Use templates</li>
-<li>Search and replace</li>
-<li>Extract common components (<code>.btn</code>, <code>.modal</code>)</li>
-</ul>
 <div class="fragment">
+<ul>
+<li>Issue not dependent on any CSS architecture
+</li></ul></div>
+<div class="fragment">
+<ul>
+<li>Use templates / components</li>
+</ul>
+
 <pre class="ejs"><code>&lt;button class=&quot;bg-blue-500 hover:bg-blue-700 text-white
                font-bold py-2 px-4 rounded&quot;&gt;
   &lt;%= label %&gt;
@@ -467,6 +427,12 @@ Functional CSS
     &lt;%= icon %&gt;
   &lt;% } %&gt;
 &lt;/button&gt;</code></pre>
+</div>
+<div class="fragment">
+<ul>
+<li>Search and replace</li>
+<li>Extract common component (<code>.btn</code>, <code>.modal</code>)</li>
+</ul>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -487,6 +453,56 @@ Functional CSS
   }
 &lt;/style&gt;
 </code></pre>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="its-just-inline-styles" class="slide level2">
+<h2>“It’s just inline styles”</h2>
+<pre class="html"><code>&lt;h2 style=&quot;font-size: 16px; font-weight: bold; color: purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<pre class="html"><code>&lt;h2 class=&quot;font-16 font-bold font-purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<div class="fragment highlight-1">
+Why are inline styles bad?
+</div>
+<div class="fragment highlight-2">
+Are both patterns equal?
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="its-just-inline-styles-1" class="slide level2">
+<h2>“It’s just inline styles”</h2>
+<pre class="html"><code>&lt;h2 style=&quot;font-size: 16px; font-weight: bold; color: purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<pre class="html"><code>&lt;h2 class=&quot;font-16 font-bold font-purple&quot;&gt;
+  Breaking Bad
+&lt;/h2&gt;</code></pre>
+<ul>
+<li>1 to 1 (inline) vs. 1 to many (classes)
+<ul>
+<li>Inconsistencies</li>
+</ul></li>
+<li>Specifity</li>
+<li>Media queries, pseudo elements</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="media-queries" class="slide level2">
+<h2>Media Queries</h2>
+<ul>
+<li>Flexbox container</li>
+<li>Column direction on mobile</li>
+<li>Row direction on desktop</li>
+</ul>
+<pre class="html"><code>&lt;div class=&quot;flex flex-column flex-md-row&quot;&gt;
+  &lt;div&gt;Element 1&lt;/div&gt;
+  &lt;div&gt;Element 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -517,8 +533,8 @@ Functional CSS
 <h2>Theming</h2>
 <ul>
 <li><code>.margin-20</code> <span class="fragment highlight-1"> → <code>.margin-3</code></span></li>
-<li><code>.font-16</code> <span class="fragment highlight-2"> → <code>.font-3</code> / <code>.font-medium</code></span></li>
-<li><code>.color-blue</code> <span class="fragment highlight-4"> → <code>.color-primary</code></span></li>
+<li><code>.font-16</code> <span class="fragment highlight-2"> → <code>.font-300</code> / <code>.font-medium</code></span></li>
+<li><code>.color-blue</code> <span class="fragment highlight-3"> → <code>.color-primary</code></span></li>
 </ul>
 <div class="fragment">
 <p>Use abstract over absolute units</p>
@@ -536,33 +552,44 @@ Functional CSS
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="performance-1" class="slide level2">
-<h2>Performance</h2>
-<ul>
-<li>Avoid expensive selectors</li>
-</ul>
-<pre class="css"><code>header#admin-main-header.header--bar-right-part li &gt; a {
-  line-height: 35px;
+<section id="performance-expensive-selectors" class="slide level2">
+<h2>Performance: <span class="highlight-1">Expensive selectors</span></h2>
+<pre class="css"><code>/* expensive */
+header#admin-main-header.header--bar-right-part li &gt; a {
+  line-height: 35px
 }
 
-.line-height-2 { line-height: 35px; }</code></pre>
-<div class="fragment">
+/* cheap */
+.line-height-2 { line-height: 35px }</code></pre>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="performance-file-size" class="slide level2">
+<h2>Performance: <span class="highlight-1">File size</span></h2>
 <ul>
 <li>File size <strong>over time</strong></li>
-<li>GZip compression</li>
+<li>CSS vs. HTML</li>
 <li>Caching</li>
+<li>GZip compression</li>
 </ul>
-</div>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="unused-css" class="slide level2">
 <h2>Unused CSS</h2>
 <ul>
-<li>Import only used CSS</li>
-<li>Remove unused CSS:
+<li>TailwindCSS (<em>before</em> compression):
+<ul>
+<li>Default: <span class="highlight-1">1.42 MB</span>, <span class="highlight-2">20.000</span> rules</li>
+</ul></li>
+<li><span class="highlight-4">Import only used CSS</span>
+<ul>
+<li>My config: <span class="highlight-1">15 KB</span>, <span class="highlight-2">610</span> rules</li>
+</ul></li>
+<li><span class="highlight-4">Remove unused CSS</span>:
 <ul>
 <li><a href="https://github.com/FullHuman/purgecss" target="_blank" rel="noopener">PurgeCSS</a>, <a href="https://github.com/purifycss/purifycss" target="_blank" rel="noopener">PurifyCSS</a>, <a href="https://github.com/uncss/uncss" target="_blank" rel="noopener">UnCSS</a>, …</li>
+<li>Avoid dynamic class names</li>
 </ul></li>
 </ul>
 
@@ -573,7 +600,7 @@ Functional CSS
 <p>CSS <span class="highlight-1">styles</span></p>
 <p><img data-src="assets/autocomplete-css.png"></p>
 <div class="fragment">
-<p>CSS <span class="highlight-4">classes</span></p>
+<p>CSS <span class="highlight-2">classes</span></p>
 <p><img data-src="assets/autocomplete-html.png"></p>
 </div>
 
@@ -588,7 +615,7 @@ Functional CSS
 <section id="frameworks" class="slide level2">
 <h2>Frameworks</h2>
 <ul>
-<li><a href="https://tailwindcss.com" target="_blank" rel="noopener">Tailwind CSS</a></li>
+<li><strong><a href="https://tailwindcss.com" target="_blank" rel="noopener">Tailwind CSS</a></strong></li>
 <li><a href="https://tachyons.io/" target="_blank" rel="noopener">Tachyons</a></li>
 <li><a href="https://basscss.com/" target="_blank" rel="noopener">BassCSS</a></li>
 <li><a href="http://buildwithbeard.com/" target="_blank" rel="noopener">Beard</a></li>
@@ -613,14 +640,61 @@ Functional CSS
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
-<section id="personal-experience" class="slide level2">
-<h2>Personal experience</h2>
+<section id="my-experience-enterprise-project" class="slide level2">
+<h2>My experience: <span class="highlight-1">Enterprise project</span></h2>
 <ul>
-<li>Team’s preference for functional CSS
+<li>Based on Bootstrap</li>
+<li>Gradual shift to utility-<em>heavy</em> usage</li>
+<li>Good for theming, <strong>not</strong> good for brand-specific designs</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="my-experience-personal-project" class="slide level2">
+<h2>My experience: <span class="highlight-1">Personal project</span></h2>
 <ul>
-<li>Gradual shift</li>
+<li>Great developer experience</li>
+<li>35 React components</li>
+<li>6 component-specific stylesheets
+<ul>
+<li>Button, Icon, Loading, …</li>
 </ul></li>
-<li>Utility-<em>heavy</em> usage</li>
+<li>2 color themes</li>
+</ul>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="facebook-redesign" class="slide level2">
+<h2>Facebook Redesign</h2>
+<ul>
+<li class="fragment">
+<span class="highlight-1">2 MB</span> uncompressed CSS (400 KB compressed). <span class="highlight-1">10% used</span> for initial render.
+</li>
+<li class="fragment">
+<span class="highlight-2">Difficult to identify</span> whether various CSS rules were <span class="highlight-2">still in use</span>.
+</li>
+<li class="fragment">
+Changes in one file could <span class="highlight-3">break the styles in another</span> without the author realizing it.
+</li>
+<li class="fragment">
+CSS precedence depends on <span class="highlight-4">ordering</span>.
+</li>
+</ul>
+<div class="fragment">
+⇒ Generating Atomic CSS at <strong>build time</strong>.
+</div>
+<p><small class="float-right"><a href="https://engineering.fb.com/web/facebook-redesign/" target="_blank" rel="noopener">https://engineering.fb.com/web/facebook-redesign/</a></small></p>
+
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section id="no-silver-bullet" class="slide level2">
+<h2>No silver bullet</h2>
+<ul>
+<li><span class="highlight-1">Tooling</span> required for best performance</li>
+<li><span class="highlight-2">Templating</span> recommended</li>
+<li>Not suitable for <span class="highlight-3">highly individual themes</span></li>
+<li>Often not suitable for styling <span class="highlight-4">3rd-party components</span></li>
+<li>Most <span class="highlight-1">UI Frameworks</span> don’t use Functional CSS</li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -651,18 +725,20 @@ Functional CSS
         <h2 style="padding-bottom: 25px;">Thank you!</h2>
         <p style="padding-bottom: 20px;">
           <a href="https://github.com/darekkay/presentations" class="text-nowrap">
-            <span class="highlight-3">github.com</span>
+            <span class="highlight-1">github.com</span>
             <span> / </span>
             <span class="highlight-2">darekkay</span>
             <span> / </span>
-            <span class="highlight-1">presentations</span>
+            <span class="highlight-3">presentations</span>
           </a>
         </p>
-        <p>Dariusz Krolikowski</p>
-        <small class="float-left">
+        <p style="padding-bottom: 20px;">Dariusz Krolikowski</p>
+        <small class="d-flex flex-col align-center float-left">
+          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
           <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
         </small>
-        <small class="float-right">
+        <small class="d-flex flex-col align-center float-right">
+          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
           <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
         </small>
       </section>
@@ -670,7 +746,6 @@ Functional CSS
     </div>
   </div>
 
-  <script src="js/head.min.js"></script>
   <script src="js/reveal.min.js"></script>
 
   <script>
@@ -682,6 +757,7 @@ Functional CSS
       history: true,
       center: true,
       controlsTutorial: false,
+      hash: true,
       autoPlayMedia: true,
 
       transition: "none", // none/fade/slide/convex/concave/zoom
@@ -689,17 +765,12 @@ Functional CSS
       // More info https://github.com/hakimel/reveal.js#dependencies
       dependencies: [
         {
-          src: "js/classList.min.js", condition: function () {
-            return !document.body.classList;
-          }
-        },
-        {
           src: "plugin/highlight/highlight.js", async: true, callback: function () {
             hljs.initHighlightingOnLoad();
           }
         },
         { src: "plugin/notes/notes.js", async: true },
-        { src: "plugin/schedule/schedule.js", async: true }
+        { src: 'plugin/theme-toggle/theme-toggle.js'}
       ]
     });
 
