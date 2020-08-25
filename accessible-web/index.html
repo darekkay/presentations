@@ -15,13 +15,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/reveal.min.css">
-   <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
-<!--  <link rel="stylesheet" href="css/theme/dk-light.min.css" id="theme">-->
+  <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
   <link rel="stylesheet" href="css/a11y.css">
 
-  <!--[if lt IE 9]>
-  <script src="js/html5shiv.min.js"></script>
-  <![endif]-->
 </head>
 
 <body>
@@ -48,12 +44,21 @@
 
 
       <section>
+        <h2 class="highlight-1">What?</h2>
+        <h2 class="fragment highlight-2">Why?</h2>
+        <h2 class="fragment highlight-3">How?</h2>
+
+        
+      </section>
+
+
+      <section>
         <h2>„Web Accessibility means that people with <mark>disabilities</mark> can use the Web.”</h2>
         <small class="float-right">
           <a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank" rel="noopener">⇒ w3.org</a>
         </small>
         
-        
+
       </section>
 
 
@@ -65,7 +70,7 @@
         </small>
 
         
-        
+
       </section>
 
 
@@ -73,9 +78,10 @@
         <h2>Requirements</h2>
         <div class="d-flex" style="justify-content: space-between">
           <ul>
+            <li>Responsiveness</li>
             <li>Performance</li>
             <li>Security</li>
-            <li>User Experience</li>
+            <li>User experience</li>
             <li>SEO</li>
             <li>...</li>
             <li><mark>Accessibility</mark></li>
@@ -87,19 +93,32 @@
         </div>
 
         
-        
+
       </section>
 
 
       <section>
-        <h2>15% of the world’s population experience some form of disability.</h2>
+        <h2><mark>15%</mark> of the world’s population experience some form of disability.</h2>
         <small class="float-right">
           <a href="http://www.worldbank.org/en/topic/disability" target="_blank" rel="noopener">⇒ The World Bank</a>
         </small>
 
         
+
+      </section>
+
+
+
+      <section>
+        <h2>Legal requirements</h2>
+
+        <blockquote>"Supreme Court hands victory to blind man who sued Domino’s over site accessibility"</blockquote>
+
+        <img src="assets/dominos.jpg" width="800" height="348" alt="" class="border">
+
         
       </section>
+
 
 
       <section>
@@ -107,24 +126,30 @@
         <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp" class="border">
 
         
-        
+
       </section>
+
 
 
       <section>
-        <h2>Different Preconditions</h2>
-        <video loop="">
-          <source data-src="assets/monkey-computer.mp4" type="video/mp4">
-        </video>
+        <h2>The cost of accessibility</h2>
+        <ul>
+          <li class="highlight-1 fragment">Knowledge</li>
+          <li class="highlight-2 fragment">Implementation</li>
+          <li class="highlight-3 fragment">Testing</li>
+        </ul>
+        <p class="fragment"><u>Similar to:</u> responsive design, performance, security, user experience, SEO, ...</p>
         
       </section>
+
 
 
       <section>
-        <h2>Accessibility is about <mark>equal</mark> treatment, not <mark>special</mark> treatment.</h2>
+        <h2><span class="highlight-1">How</span> do I make my site more accessible?</h2>
         
-        
+
       </section>
+
 
 
       <section>
@@ -134,54 +159,40 @@
         </small>
 
         
-        
+
       </section>
 
 
       <section>
         <ul>
-          <li><mark>Principles</mark>
+          <li><span class="highlight-1">Principles</span>
             <ul>
               <li>perceivable, operable, understandable, robust</li>
             </ul>
           </li>
-          <li><mark>Guidelines</mark></li>
-          <li><mark>Success Criteria</mark>
+          <li><span class="highlight-2">Guidelines</span></li>
+          <li><span class="highlight-3">Success Criteria</span>
             <ul>
               <li> 3 levels of conformance: A < AA < AAA</li>
             </ul>
           </li>
-          <li><mark>Techniques</mark>
+          <li><span class="highlight-4">Techniques</span>
           </li>
         </ul>
         
-        
+
       </section>
 
 
-      <section>
-        <h2 class="monospace">a<span class="highlight-1">ccessibilit</span>y</h2>
-        <div class="h2">↓</div>
-        <div class="h2">a<span class="highlight-1">11</span>y</div>
 
-        
-        
-      </section>
 
 
       <section>
-        <h2>How do I make my site more accessible?</h2>
-        
-        
-      </section>
-
-
-      <section>
-        <h2>Disabilities</h2>
+        <h2>Different preconditions</h2>
         <ul class="h3">
           <li>Motor disabilities</li>
-          <li>Deafness</li>
           <li>Blindness / Low vision</li>
+          <li>Deafness</li>
           <li>Cognitive disabilities</li>
         </ul>
         
@@ -189,17 +200,17 @@
 
 
       <section>
-        <h2>Keyboard Navigation</h2>
+        <h2>Keyboard navigation</h2>
         <video class="border" loop="">
           <source data-src="assets/computer-hand.mp4" type="video/mp4">
         </video>
         
-        
+
       </section>
 
 
       <section>
-        <h2>Keyboard Navigation</h2>
+        <h2>Keyboard navigation</h2>
         <div>
           <ul>
             <li>Ensure a logical tab order</li>
@@ -224,7 +235,7 @@
 
         
 
-        
+
       </section>
 
 
@@ -251,12 +262,12 @@
         </p>
 
         
-        
+
       </section>
 
 
       <section>
-        <h2>Screen Reader</h2>
+        <h2>Screen reader</h2>
         <p>User interface for visually impaired people</p>
         <ul>
           <li>
@@ -276,12 +287,12 @@
         </ul>
 
         
-        
+
       </section>
 
 
       <section>
-        <h2>Simplify navigation</h2>
+        <h2>Screen reader optimizations</h2>
 
         <ul>
           <li>Use
@@ -289,16 +300,22 @@
             <ul>
               <li><code class="highlight-1">&lt;main&gt;</code> vs. <code>&lt;div id="main"&gt;</code></li>
               <li><code class="highlight-1">&lt;nav&gt;</code> vs. <code>&lt;div id="nav"&gt;</code></li>
-
             </ul>
           </li>
           <li>Use <code>H1</code>-<code>H6</code> semantically, not for styling</li>
-          <li>Consider adding <a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener">Skip
-            links</a></li>
+          <li class="fragment">Simplify navigation
+            <ul>
+              <li>
+                Consider adding
+                <a href="https://webaim.org/techniques/skipnav/" target="_blank" rel="noopener">Skip links</a>
+              </li>
+            </ul>
+          </li>
+          <li class="fragment">Provide <a href="https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/" target="_blank" rel="noopener">page language</a> in HTML</li>
         </ul>
 
         
-        
+
       </section>
 
 
@@ -325,12 +342,12 @@
         </ul>
 
         
-        
+
       </section>
 
 
       <section>
-        <h2>Custom Components</h2>
+        <h2>Custom components</h2>
 
         <ul class="fragment">
           <li>Prefer native over custom components</li>
@@ -340,7 +357,7 @@
         </ul>
 
         
-        
+
       </section>
 
 
@@ -354,10 +371,10 @@
 
         <p><img src="assets/link-vs-button.png" width="587" height="202" alt="Example for using links vs buttons."></p>
 
-        <small class="float-right"><a href="" target="_blank" rel="noopener"></a></small>
+        <p>Separate tags from their styling</p>
 
         
-        
+
       </section>
 
 
@@ -402,7 +419,7 @@
           </code></pre>
 
         
-        
+
       </section>
 
 
@@ -414,49 +431,136 @@
             <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html" target="_blank" rel="noopener">WCAG guideline 1.1.1</a>
           </small>
         </blockquote>
-        <ul class="fragment">
-          <li>Use <span class="highlight-1">&lt;label&gt;</span> for form elements</li>
-          <li>Use <span class="highlight-1">aria-label</span> if the label is not visible</li>
-          <li>Use <span class="highlight-1">aria-labelledby</span> if the label is visible</li>
-          <li>Use <span class="highlight-1">aria-describedby</span> for additional descriptions</li>
-        </ul>
 
         
+
+      </section>
+
+
+      <section>
+        <div>
+          <h3>Missing or unassigned label</h3>
+          <pre><code class="hljs html">&lt;label&gt;Name&lt;/label&gt;
+&lt;input id=&quot;html-label&quot;&gt;
+
+&lt;!-- edit  has auto complete  blank --&gt;
+</code></pre>
+        </div>
+
+        <img src="assets/label-input.png" width="286" height="89" alt="Input with a label">
+
+        <div class="fragment">
+          <h3>Assigned label</h3>
+          <pre><code class="hljs html">&lt;label for=&quot;html-label&quot;&gt;Name&lt;/label&gt;
+&lt;input id=&quot;html-label&quot;&gt;
+
+&lt;!-- Name  edit  has auto complete  blank --&gt;
+</code></pre>
+        </div>
+
         
       </section>
 
 
       <section>
-        <h2>Alternative Texts</h2>
+        <h3>Placeholders</h3>
+        <pre><code class="hljs html">&lt;input placeholder=&quot;Name&quot;&gt;
+
+&lt;!-- Name  edit  has auto complete  blank --&gt;
+</code></pre>
+
+        <img src="assets/label-placeholder.png" width="323" height="116" alt="Input with a placeholder">
+
+        <div>⇒ Bad user experience</div>
+
+        
+      </section>
+
+
+
+      <section>
+        <h2>Alternative texts</h2>
 
         <pre><code class="hljs html">&lt;img src="dog.jpg" alt="Dog playing in meadow."&gt;
 &lt;img src="fb.png" alt=""&gt; &lt;!-- decorative image --&gt;</code></pre>
 
         <p class="fragment">
-          <img src="assets/share-buttons.png" width="604" height="82" alt="Contrast ratio rating">
+          <img src="assets/alt-text.png" width="604" height="82" alt="Contrast ratio rating">
         </p>
 
         
       </section>
 
 
-      <section>
-        <h2>Live Regions</h2>
 
-        <ul class="fragment">
-          <li>Announce changes at runtime
-            <ul>
-              <li><code class="highlight-1">role="alert"</code> or</li>
-              <li><code class="highlight-1">aria-live="polite|assertive"</code></li>
-            </ul>
-          </li>
-          <li>A live region has to be present before changing content</li>
+      <section>
+        <h3>ARIA attributes</h3>
+
+        <img src="assets/label-close-button.png" width="380" height="81" alt="Modal with a close button">
+
+
+        <pre class="fragment"><code class="hljs html">&lt;button&gt;×&lt;/button&gt;
+&lt;!-- ×  button --&gt;
+
+&lt;button aria-label=&quot;Close&quot;&gt;×&lt;/button&gt;
+&lt;!-- Close  button --&gt;
+
+&lt;div id=&quot;close-id&quot;&gt;Close&lt;/div&gt;
+&lt;button aria-labelledby=&quot;close-id&quot;&gt;×&lt;/button&gt;
+&lt;!-- Close  button --&gt;
+
+&lt;div id=&quot;close-id&quot;&gt;Close&lt;/div&gt;
+&lt;button aria-describedby=&quot;close-id&quot;&gt;×&lt;/button&gt;
+&lt;!-- ×  button  Close --&gt;
+</code></pre>
+
+        
+      </section>
+
+
+
+      <section>
+        <h2>Labels</h2>
+        <ul>
+          <li>Use <span class="highlight-1">&lt;label&gt;</span> for form elements</li>
+          <li>Use <span class="highlight-2">alt</span> for images</li>
+          <li>Use <span class="highlight-3">aria-label</span> if the label is not visible</li>
+          <li>Use <span class="highlight-4">aria-labelledby</span> if the label is visible</li>
+          <li>Use <span class="highlight-1">aria-describedby</span> for additional info</li>
         </ul>
 
-        <small class="float-right"><a href="" target="_blank" rel="noopener"></a></small>
+        <p class="fragment">
+          <img src="assets/dev-tools.png" width="701" height="262" alt="Accessibility Dev Tools">
+        </p>
 
         
+      </section>
+
+
+
+
+      <section>
+        <h2>Live regions</h2>
+
+        <img src="assets/autocomplete.png" width="604" height="174" alt="Autocomplete input">
+
+        <ul class="fragment">
+          <li>Announce dynamic/asynchronous changes
+            <ul>
+              <li><code class="highlight-1">aria-live="polite|assertive"</code> or</li>
+              <li><code class="highlight-1">role="alert"</code> (assertive)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="fragment">
+          <pre><code class="hljs html">&lt;div id=&quot;live-region&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;</code></pre>
+          <pre><code class="hljs javascript">document.querySelector("#live-region")
+        .innerText = "8 search results loaded"</code></pre>
+        </div>
+
         
+
       </section>
 
 
@@ -464,6 +568,37 @@
         <h2>Tools</h2>
 
         
+      </section>
+
+
+
+
+      <section>
+        <h2 class="monospace">a<span class="highlight-1">ccessibilit</span>y</h2>
+        <div class="h2">↓</div>
+        <div class="h2">a<span class="highlight-1">11</span>y</div>
+
+        
+
+      </section>
+
+
+
+
+      <section>
+        <h2>axe-core</h2>
+
+        <pre><code class="hljs shell" data-trim="">
+$ npm install -g axe-cli
+$ axe example.com
+      </code></pre>
+
+        <img class="fragment" src="assets/axe-core.png" height="169" width="750">
+
+        <p class="fragment">Extensions/plugins available for: Chrome/Firefox, Cypress, Selenium, Storybook, ...</p>
+
+        
+
       </section>
 
 
@@ -475,14 +610,14 @@ $ npm install -g pa11y
 $ pa11y example.com
       </code></pre>
 
-        <img class="fragment" src="assets/pa11y.png" height="256" width="990">
+        <img src="assets/pa11y.png" height="256" width="990">
 
         <pre class="fragment"><code class="hljs shell" data-trim="">
 $ npm install --save pa11y-ci
       </code></pre>
 
         
-        
+
       </section>
 
 
@@ -512,32 +647,59 @@ $ npm install --save pa11y-ci
 
 
       <section>
+        <p>Tools can detect <span class="highlight-1">only 20% to 50%</span> of all accessibility issues.</p>
+        <p class="fragment"><span class="highlight-2">Manual testing</span> is always required.</p>
+      </section>
+
+      <!--
+            <section>
+              <blockquote>98.1% of the top 1,000,000 home pages have detectable WCAG 2 failures</blockquote>
+              <p>
+              <img src="assets/wcag-results.png" width="781" height="432" alt="WCAG test results">
+
+              </p>
+
+              <small class="float-right">
+                <a href="https://webaim.org/projects/million/" target="_blank" rel="noopener">⇒ webaim.org</a>
+              </small>
+            </section>
+      -->
+
+
+      <section>
         <h2>Resources</h2>
         <ul>
-          <li><a href="https://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
-          <li><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank" rel="noopener">WCAG Checklist</a></li>
+          <li><a href="https://github.com/brunopulis/awesome-a11y" target="_blank" rel="noopener">awesome-a11y</a></li>
+          <li><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank" rel="noopener">WCAG checklist</a></li>
           <li>
             <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">Google Web Fundamentals</a>
           </li>
           <li>
             <a href="https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts" target="_blank" rel="noopener">NVDA
-              Quick Reference</a></li>
-          <li>
-            <a href="javascript:(function()%7Bdocument.addEventListener('focusin'%2C%20()%20%3D%3E%20console.log(document.activeElement)%2C%20false)%3BArray.from(document.getElementsByTagName(%22iframe%22)).map(iframe%20%3D%3E%20iframe.contentWindow.document).forEach(iframeDoc%20%3D%3E%20iframeDoc.addEventListener('focusin'%2C%20()%20%3D%3E%20console.log(iframeDoc.activeElement)%2C%20false))%7D)()">Log Focus Changes</a> Bookmarklet
-            <ul>
-              <li>Drag the link onto your bookmark bar</li>
-            </ul>
-          </li>
-          <li><a href="https://darekkay.com/blog/accessible-ui-frameworks/" target="_blank" rel="noopener">The state of accessible web UI frameworks</a></li>
-          <li><a href="resources/index.html" target="_blank" rel="noopener">Demo Examples</a></li>
+              quick reference</a></li>
+          <li><a href="resources/index.html" target="_blank" rel="noopener">Demo examples</a></li>
         </ul>
       </section>
+
+
+
 
 
       <section>
         <h2>Accessibility doesn't just happen, <mark>you</mark> have to make it happen.</h2>
         
       </section>
+
+
+
+
+      <section>
+        <h2>Accessibility is about <mark>equal</mark> treatment, not <span class="highlight-2">special</span> treatment.</h2>
+
+        
+      </section>
+
+
 
 
       <section style="font-size: 1.2em;">

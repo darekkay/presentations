@@ -17,12 +17,22 @@
 
     <h2>Basic button</h2>
     <div>
-      <button class="btn btn-primary">Native</button>
-      <div class="btn btn-primary" tabindex="0">Custom</div>
+      <button class="btn btn-primary" onclick="alert('Clicked')">Native</button>
+      <div class="btn btn-primary" onclick="alert('Clicked')">Custom</div>
+    </div>
+
+    <pre><code class="hljs html">&lt;button onclick=&quot;...&quot;&gt;Native&lt;/button&gt;
+
+&lt;div onclick=&quot;...&quot;&gt;Custom&lt;/div&gt;</code></pre>
+
+    <h2>Tabindex</h2>
+    <div>
+      <button class="btn btn-primary" onclick="alert('Clicked')">Native</button>
+      <div class="btn btn-primary" tabindex="0" onclick="alert('Clicked')">Custom</div>
     </div>
 
     <h2>Role attribute</h2>
-    <div class="btn btn-primary" tabindex="0" role="button">Custom</div>
+    <div class="btn btn-primary" tabindex="0" role="button" onclick="alert('Clicked')">Custom</div>
 
     <h2>Clickable</h2>
     <div class="text-center">
