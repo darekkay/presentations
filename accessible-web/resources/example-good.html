@@ -11,8 +11,12 @@
 </head>
 
 <body class="example-good">
+  <div id="controls" aria-hidden="true">
+    <!-- Hiding the controls is an accessibility issue, but it is only used for demo purposes -->
+    <a href="example-bad.html" tabindex="-1">Go to inaccessible example</a>
+  </div>
+
   <header>
-    <!-- NOTE: The text alternative for this image of text contains the words that are displayed in the image -->
     <img id="logo" src="assets/img/banner.jpg" alt="Cow Daily">
     <nav>
       <a href="#">Home</a>
@@ -24,11 +28,13 @@
 
   <main class="container-fluid">
 
-    <h1>Cow News</h1>
+    <div class="mb-4">
+      <h1 class="h1">Cow News</h1>
 
-    <p class="lorem">In laboratory studies, young cattle are able to memorize the locations of several food sources and retain this memory for at least 8 hours, although this declined after 12 hours. Fifteen-month-old heifers learn more quickly than
-      <a href="#">adult cows</a> which have had either one or two calvings, but their longer-term memory is less stable. Mature cattle perform well in spatial learning tasks and have a good long-term memory in these tests. Cattle tested in a radial arm maze are able to remember the locations of high-quality food for at least 30 days. Although they initially learn to avoid low-quality food, this memory diminishes over the same duration.
-    </p>
+      <p class="lorem">In laboratory studies, young cattle are able to memorize the locations of several food sources and retain this memory for at least 8 hours, although this declined after 12 hours. Fifteen-month-old heifers learn more quickly than
+        <a href="#">adult cows</a> which have had either one or two calvings, but their longer-term memory is less stable. Mature cattle perform well in spatial learning tasks and have a good long-term memory in these tests. Cattle tested in a radial arm maze are able to remember the locations of high-quality food for at least 30 days. Although they initially learn to avoid low-quality food, this memory diminishes over the same duration.
+      </p>
+    </div>
 
     <div class="row mb-4">
       <div class="col-12 col-sm-4">
@@ -45,7 +51,7 @@
         <div class="card">
           <img class="card-img-top" src="assets/img/article-2.jpg" width="250" height="166" alt="">
           <div class="card-body">
-            <h2 class="card-title">Hair Trends 2018</h2>
+            <h2 class="card-title">Hair Trends 2020</h2>
             <p class="card-text">Become the coolest cow on the pasture!</p>
             <a href="#">Hair trends</a>
           </div>
@@ -63,12 +69,12 @@
       </div>
     </div>
 
-    <h2>Cow Ipsum</h2>
-    <p>Chocolate milk lorem ipsum dolor sit amet, consectetur cow elit. Aliquid deleniti earum eligendi hic, in inventore ipsum iste molestiae nam natus nemo nostrum, odio perspiciatis quasi quisquam quo sapiente ut veriLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum ex eget quam varius, vel tincidunt ligula placerat. Cras interdum felis in diam ullamcorper egestas pellentesque id dolor. Nulla ut erat metus. In porta accumsan blandit. Nullam varius neque a diam iaculis ullamcorper. Morbi consectetur ante non porttitor finibus. Quisque at aliquam nunc. Fusce sodales elit purus, ac pulvinar sem iaculis sit amet. In molestie eros id scelerisque efficitur. In auctor nibh eget lobortis commodo.</p>
+    <h2 class="h2">Cow Ipsum</h2>
+    <p>Chocolate milk lorem ipsum dolor sit amet, consectetur cow elit. Aliquid deleniti earum eligendi hic, in inventore ipsum iste molestiae nam natus nemo nostrum, odio perspiciatis quasi quisquam quo sapiente ut veriLorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Cras vestibulum ex eget</em> quam varius, vel tincidunt ligula placerat. Cras interdum felis in diam ullamcorper egestas pellentesque id dolor. Nulla ut erat metus. In porta accumsan blandit. Nullam varius neque a diam iaculis ullamcorper. Morbi consectetur ante non porttitor finibus. Quisque at aliquam nunc. Fusce sodales elit purus, ac pulvinar sem iaculis sit amet. In molestie eros id scelerisque efficitur. In auctor nibh eget lobortis commodo.</p>
 
     <img class="joke" src="assets/img/coward.jpg" width="900" height="285" alt="Why was the cow so scared? Because he was a cow-ard.">
 
-    <h2>Music Charts</h2>
+    <h2 class="h2">Music Charts</h2>
     <ol>
       <li>Foo Fighters - For All the Cows</li>
       <li>Aerosmith - Milk Cow Blues</li>
@@ -79,19 +85,7 @@
       <li>Seals and Crofts - Cows of Gladness</li>
     </ol>
 
-    <h2>What does the cow say?</h2>
-    <div class="sr-only">Hi, I'm Steve!</div>
-    <pre class="cow contrast" aria-hidden="true">  ______________
-&lt; Hi, I'm Steve! &gt;
-  --------------
-         \   ^__^
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-    </pre>
-
-    <h2>Subscribe to our Newsletter</h2>
+    <h2 class="h2">Subscribe to our Newsletter</h2>
     <form class="newsletter card p-4">
       <fieldset>
         <legend>Newsletter frequency</legend>

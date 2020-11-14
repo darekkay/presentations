@@ -11,45 +11,42 @@
 </head>
 
 <body class="example-bad">
+  <div id="controls" aria-hidden="true">
+    <!-- Hiding the controls is an accessibility issue, but it is only used for demo purposes -->
+    <a href="example-good.html" tabindex="-1">Go to accessible example</a>
+    <button id="annotation-toggle" tabindex="-1">Show annotations</button>
+  </div>
 
-  <!-- NOTE: Use semantic tags -->
-  <div id="header">
-    <!-- NOTE: Wrong alt tag content -->
-    <img id="logo" src="assets/img/banner.jpg" alt="Website logo on a green background">
+  <div id="header" data-tippy-content="Missing landmark">
+    <img id="logo" src="assets/img/banner.jpg" alt="Cow Daily">
     <div id="nav">
-      <!-- NOTE: Wrong tab order -->
-      <button class="btn btn-success float-right">Sign Up</button>
+      <button class="btn btn-success float-right" data-tippy-content="Confusing tab order (float)">Sign Up</button>
       <a href="#">Home</a>
-      <a href="#">Archive</a>
+      <a href="#" tabindex="-1" data-tippy-content="Unfocusable link">Archive</a>
       <a href="#">About Us</a>
     </div>
   </div>
 
-  <!-- NOTE: This breaks the tab order, too -->
   <div id="footer">
-    <div>Handmade with ♥ by <a href="https://darekkay.com" target="_blank">Darek Kay</a></div>
+    <div>Handmade with ♥ by <a href="https://darekkay.com" target="_blank" data-tippy-content="Confusing tab order (absolute)">Darek Kay</a></div>
   </div>
 
   <div id="main" class="container-fluid">
     <div class="mb-4">
-      <!-- NOTE: Use Headline tag instead -->
-      <div class="h1">Cow News</div>
+      <div class="h1" data-tippy-content="Missing headline semantics" data-tippy-placement="top-start">Cow News</div>
 
       <p class="lorem">In laboratory studies, young cattle are able to memorize the locations of several food sources and retain this memory for at least 8 hours, although this declined after 12 hours. Fifteen-month-old heifers learn more quickly than
-        <a href="#" tabindex="1">adult cows</a> which have had either one or two calvings, but their longer-term memory is less stable. Mature cattle perform well in spatial learning tasks and have a good long-term memory in these tests. Cattle tested in a radial arm maze are able to remember the locations of high-quality food for at least 30 days. Although they initially learn to avoid low-quality food, this memory diminishes over the same duration.
+        <a href="#" tabindex="1" data-tippy-content="Confusing focus order (tabindex)">adult cows</a> which have had either one or two calvings, but their longer-term memory is less stable. Mature cattle perform well in spatial learning tasks and have a good long-term memory in these tests. <a class="link-unstyled" href="https://en.wikipedia.org/wiki/Calf" data-tippy-content="Link not visually distinct">Cattle</a> tested in a radial arm maze are able to remember the locations of high-quality food for at least 30 days. Although they initially learn to avoid low-quality food, this memory diminishes over the same duration.
       </p>
     </div>
     <div class="row mb-4">
       <div class="col-12 col-sm-4">
         <div class="card">
-          <!-- NOTE: Missing alt tags -->
-          <img class="card-img-top" src="assets/img/article-1.jpg" width="250" height="166">
+          <img class="card-img-top" src="assets/img/article-1.jpg" width="250" height="166" data-tippy-content="Missing alt tag">
           <div class="card-body">
-            <!-- NOTE: Wrong headline level, misused for styling -->
             <h5 class="card-title">What type are you?</h5>
             <p class="card-text">Take this free personality test in just 10 minutes.</p>
-            <!-- NOTE: The link text is not descriptive to convey the purpose of the link -->
-            <a href="#">Read more...</a>
+            <a href="#" data-tippy-content="Non-descriptive link text">Read more...</a>
           </div>
         </div>
       </div>
@@ -57,9 +54,9 @@
         <div class="card">
           <img class="card-img-top" src="assets/img/article-2.jpg" width="250" height="166">
           <div class="card-body">
-            <h5 class="card-title">Hair Trends 2018</h5>
+            <h5 class="card-title" data-tippy-content="Headline out of order (h5)">Hair Trends 2020</h5>
             <p class="card-text">Become the coolest cow on the pasture!</p>
-            <a href="#">Read more...</a>
+            <a href="#" data-tippy-content="Missing focus ring">Read more...</a>
           </div>
         </div>
       </div>
@@ -76,11 +73,12 @@
     </div>
 
     <div class="h2">Cow Ipsum</div>
-    <p>Chocolate milk lorem ipsum dolor sit amet, consectetur cow elit. Aliquid deleniti earum eligendi hic, in inventore ipsum iste molestiae nam natus nemo nostrum, odio perspiciatis quasi quisquam quo sapiente ut veriLorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum ex eget quam varius, vel tincidunt ligula placerat. Cras interdum felis in diam ullamcorper egestas pellentesque id dolor. Nulla ut erat metus. In porta accumsan blandit. Nullam varius neque a diam iaculis ullamcorper. Morbi consectetur ante non porttitor finibus. Quisque at aliquam nunc. Fusce sodales elit purus, ac pulvinar sem iaculis sit amet. In molestie eros id scelerisque efficitur. In auctor nibh eget lobortis commodo.</p>
+    <p>Chocolate milk lorem ipsum dolor sit amet, consectetur cow elit. Aliquid deleniti earum eligendi hic, in inventore ipsum iste molestiae nam natus nemo nostrum, odio perspiciatis quasi quisquam quo sapiente ut veriLorem ipsum dolor sit amet, consectetur adipiscing elit. <i data-tippy-content="Non-semantic tag (i)">Cras vestibulum ex eget</i> quam varius, vel tincidunt ligula placerat. Cras interdum felis in diam ullamcorper egestas pellentesque id dolor. Nulla ut erat metus. In porta accumsan blandit. Nullam varius neque a diam iaculis ullamcorper. Morbi consectetur ante non porttitor finibus. Quisque at aliquam nunc. Fusce sodales elit purus, ac pulvinar sem iaculis sit amet. In molestie eros id scelerisque efficitur. In auctor nibh eget lobortis commodo.</p>
 
-    <img class="joke" src="assets/img/coward.jpg" width="900" height="285">
+    <img class="joke" src="assets/img/coward.jpg" width="900" height="285" data-tippy-content="Missing text alternative">
 
     <div class="h2">Music Charts</div>
+    <div data-tippy-content="Missing list semantics" data-tippy-placement="top-start"></div>
     1. Foo Fighters - For All the Cows<br>
     2. Aerosmith - Milk Cow Blues<br>
     3. Elton John - Poor Cow<br>
@@ -89,24 +87,12 @@
     6. The Turtles - Can't You Hear the Cows<br>
     7. Seals and Crofts - Cows of Gladness<br><br>
 
-    <div class="h2">What does the cow say?</div>
-    <pre class="cow contrast">  ______________
-&lt; Hi, I'm Steve! &gt;
-  --------------
-         \   ^__^
-          \  (oo)\_______
-             (__)\       )\/\
-                 ||----w |
-                 ||     ||
-    </pre>
-
     <div class="h2">Subscribe to our Newsletter</div>
 
     <form class="newsletter card p-4">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="newsletter" id="newsletter-weekly" value="weekly">
-        <!-- NOTE: Label not associated with form input -->
-        <label class="form-check-label mr-5">
+        <label class="form-check-label mr-5" data-tippy-content="Label not associated with input">
           Weekly
         </label>
         <input class="form-check-input" type="radio" name="newsletter" id="newsletter-monthly" value="monthly">
@@ -117,10 +103,8 @@
       <hr>
       <div class="form-group">
         <label>Email address</label>
-        <!-- NOTE: Label and/or placeholder missing -->
-        <input type="email" class="form-control" id="input-email">
-        <!-- NOTE: Contrast ratio not sufficient -->
-        <small id="emailHelp" class="form-text contrast">We'll never share your email with anyone else.</small>
+        <input type="email" class="form-control" id="input-email" data-tippy-content="Missing label">
+        <small id="emailHelp" class="form-text contrast" data-tippy-content="Insufficient contrast ratio" data-tippy-placement="bottom">We'll never share your email with anyone else.</small>
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -129,6 +113,32 @@
     <div class="footer-spacer"></div>
   </div>
   <!--<script src="assets/js/tota11y.min.js"></script>-->
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/tippy.min.js"></script>
+  <script>
+    const tooltips = tippy("[data-tippy-content]", {
+      hideOnClick: false,
+      trigger: "manual",
+      theme: "cownews"
+    });
+    let tooltipsVisible = false;
+    document.querySelector("#annotation-toggle").addEventListener("click", (event) => {
+      tooltipsVisible = !tooltipsVisible;
+      if (tooltipsVisible) {
+        event.target.innerText = "Hide annotations";
+        tooltips.forEach(tooltip => {
+          tooltip.enable();
+          tooltip.show();
+        });
+      } else {
+        event.target.innerText = "Show annotations";
+        tooltips.forEach(tooltip => {
+          tooltip.enable();
+          tooltip.hide();
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

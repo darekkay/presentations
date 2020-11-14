@@ -6,6 +6,22 @@ body {
   align-items: center;
 }
 
+#controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-bottom: 1px solid #333;
+}
+
+#controls > * {
+  margin-right: 1rem;
+}
+
 main, #main, header, #header, footer, #footer {
   width: 100%;
   max-width: 850px;
@@ -18,6 +34,7 @@ header, #header {
   padding-bottom: 1.5rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, .125);
+  margin-top: 80px;
 }
 
 #logo {
@@ -30,17 +47,30 @@ nav a, #nav a {
   line-height: 38px;
 }
 
+main, #main {
+  margin-bottom: 50px;
+}
+
 footer, #footer {
   position: absolute;
   bottom: 0;
   text-align: center;
 
-  padding: 5px 0 15px;
+  padding: 20px 0;
   border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
 .footer-spacer {
   margin-bottom: 50px;
+}
+
+.tippy-box[data-theme~='cownews'] {
+  background-color: #db2106;
+  color: white;
+}
+
+.tippy-box[data-theme~='cownews'] .tippy-arrow {
+  color: #db2106;
 }
 
 section {
@@ -62,18 +92,25 @@ legend {
   margin-bottom: 25px;
 }
 
+.link-unstyled,
+.link-unstyled:hover,
+.link-unstyled:visited {
+  color: inherit;
+}
+
 .newsletter {
   max-width: 500px;
 }
 
-.example-bad .h1 {
-  font-size: 2.5rem; font-weight: bold;
-  margin-bottom: .5rem;
+.h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.example-bad .h2 {
-  font-size: 2rem; font-weight: bold;
-  margin-bottom: .5rem;
+.h2 {
+  font-size: 2rem;
+  margin-bottom: 1.3rem;
+  margin-top: 2rem;
 }
 
 .example-bad .lorem {
@@ -88,7 +125,7 @@ legend {
 
 .example-bad .contrast {
   /* NOTE: Insufficient contrast ratio */
-  color: #969696;
+  color: #cacaca;
 }
 
 .example-bad .card-body :focus {
@@ -104,7 +141,6 @@ legend {
 
 .example-good .card-title {
   font-size: 1.25rem;
-  font-weight: bold;
 }
 
 .example-good .btn-primary {

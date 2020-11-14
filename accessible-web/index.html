@@ -215,6 +215,7 @@
           <ul>
             <li>Ensure a logical tab order</li>
             <li>Don't use <code>tabindex</code> > 0</li>
+            <li>Make all interactive elements focusable</li>
             <li>Don't remove the default focus ring</li>
           </ul>
           <pre><code class="hljs css">:focus {
@@ -598,27 +599,8 @@ $ axe example.com
         <p class="fragment">Extensions/plugins available for: Chrome/Firefox, Cypress, Selenium, Storybook, ...</p>
 
         
-
       </section>
 
-
-      <section>
-        <h2>pa11y</h2>
-
-        <pre><code class="hljs shell" data-trim="">
-$ npm install -g pa11y
-$ pa11y example.com
-      </code></pre>
-
-        <img src="assets/pa11y.png" height="256" width="990">
-
-        <pre class="fragment"><code class="hljs shell" data-trim="">
-$ npm install --save pa11y-ci
-      </code></pre>
-
-        
-
-      </section>
 
 
       <section>
@@ -632,9 +614,9 @@ $ npm install --save pa11y-ci
               </li>
             </ul>
           </li><li>
-            Chrome DevTools<br>
+            Browser DevTools:<br>
             <div style="text-align: center;">
-              <img src="assets/labels-chrome.png" width="213" height="314" alt="">
+              <img src="assets/labels-chrome.png" width="213" height="314" alt="Accessibility tree in Chrome browser">
             </div>
           </li>
           <li>
@@ -644,6 +626,7 @@ $ npm install --save pa11y-ci
 
         
       </section>
+
 
 
       <section>
@@ -666,18 +649,25 @@ $ npm install --save pa11y-ci
       -->
 
 
+
+      <section>
+        <h2>Accessibility Review</h2>
+        <ol>
+          <li><span class="highlight-1">Tool-based</span> testing</li>
+          <li><span class="highlight-2">Visual</span> and <span class="highlight-2">Content</span> testing</li>
+          <li><span class="highlight-3">Keyboard-only</span> testing</li>
+          <li><span class="highlight-4">Screen reader</span> testing</li>
+        </ol>
+      </section>
+
+
+
       <section>
         <h2>Resources</h2>
         <ul>
+          <li><a href="https://darekkay.com/a11y" target="_blank" rel="noopener">darekkay.com/a11y</a></li>
           <li><a href="https://github.com/brunopulis/awesome-a11y" target="_blank" rel="noopener">awesome-a11y</a></li>
-          <li><a href="https://www.wuhcag.com/wcag-checklist/" target="_blank" rel="noopener">WCAG checklist</a></li>
-          <li>
-            <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">Google Web Fundamentals</a>
-          </li>
-          <li>
-            <a href="https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts" target="_blank" rel="noopener">NVDA
-              quick reference</a></li>
-          <li><a href="resources/index.html" target="_blank" rel="noopener">Demo examples</a></li>
+          <li><a href="resources/index.html" target="_blank" rel="noopener">Demo examples from this talk</a></li>
         </ul>
       </section>
 
