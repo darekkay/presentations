@@ -9,12 +9,9 @@
 
   <title>Functional CSS</title>
 
-  <link rel="stylesheet" href="css/reveal.min.css">
-  <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
-
-  <!--[if lt IE 9]>
-  <script src="js/html5shiv.min.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/dk-dark.css" id="theme">
 </head>
 <body>
   <div class="reveal">
@@ -198,6 +195,25 @@ Functional CSS
 .author-name { font-weight: bold }  /* semantic       */</code></pre>
 </div>
 
+<!-- ----------------------------------------------------------------------- -->
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>“HTML is for content. CSS is for styling. Separate your concerns.”</p>
+</blockquote>
+<div class="text-right">
+<small class="highlight-2">Frontend developers</small>
+</div>
+<div class="fragment">
+<pre class="html"><code>&lt;div class=&quot;profile-wrapper&quot;&gt;
+  &lt;div class=&quot;profile&quot;&gt;
+    &lt;div class=&quot;profile-name-wrapper&quot;&gt;
+      &lt;div class=&quot;profile-name&quot;&gt;Alex&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="separation-of-concerns" class="slide level2">
@@ -717,7 +733,7 @@ CSS precedence depends on <span class="highlight-4">ordering</span>.
 
 </section>
 
-      <section style="font-size: 1.2em;">
+            <section style="font-size: 1.2em;">
         <h2 style="padding-bottom: 25px;">Thank you!</h2>
         <p style="padding-bottom: 20px;">
           <a href="https://github.com/darekkay/presentations" class="text-nowrap">
@@ -738,49 +754,35 @@ CSS precedence depends on <span class="highlight-4">ordering</span>.
           <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
         </small>
       </section>
-
+      
     </div>
   </div>
 
-  <script src="js/reveal.min.js"></script>
+  <script src="dist/reveal.js"></script>
 
+  <script src="dist/plugin/notes/notes.js"></script>
+  <script src="dist/plugin/search/search.js"></script>
+  <script src="dist/plugin/highlight/highlight.js"></script>
+
+  <!-- TODO: use new plugin format  -->
+  <script src="dist/plugin/theme-toggle/theme-toggle.js"></script>
   <script>
-
-    // More info https://github.com/hakimel/reveal.js#configuration
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
     Reveal.initialize({
       controls: false,
+      controlsTutorial: false,
       progress: true,
       history: true,
       center: true,
-      controlsTutorial: false,
       hash: true,
       autoPlayMedia: true,
 
-      transition: "none", // none/fade/slide/convex/concave/zoom
+      transition: 'none', // none/fade/slide/convex/concave/zoom
 
-      // More info https://github.com/hakimel/reveal.js#dependencies
-      dependencies: [
-        {
-          src: "plugin/highlight/highlight.js", async: true, callback: function () {
-            hljs.initHighlightingOnLoad();
-          }
-        },
-        { src: "plugin/notes/notes.js", async: true },
-        { src: 'plugin/theme-toggle/theme-toggle.js'}
-      ]
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [ RevealSearch, RevealHighlight, RevealNotes],
     });
-
-  </script>
-
-  <script>
-    // Print stylesheet
-    if (window.location.search.match( /print-pdf/gi )) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
   </script>
   </body>
 </html>

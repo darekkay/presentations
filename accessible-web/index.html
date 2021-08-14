@@ -14,10 +14,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/reveal.min.css">
-  <link rel="stylesheet" href="css/theme/dk-dark.min.css" id="theme">
-  <link rel="stylesheet" href="css/a11y.css">
-
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/dk-dark.css" id="theme">
 </head>
 
 <body>
@@ -123,7 +122,11 @@
 
       <section>
         <h2>Accessibility is "hard"</h2>
-        <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp" class="border">
+        <div class="d-flex" style="justify-content: center;">
+          <img src="assets/construction-fail.jpg" width="421" height="431" alt="A pole blocking a wheelchair ramp." class="border">
+          <span>&nbsp;&nbsp;</span>
+          <img src="assets/construction-fail-2.jpg" width="242" height="431" alt="A solid looking wheelchair ramp with a section removed to reach a door on the other side of the ramp." class="border">
+        </div>
 
         
 
@@ -717,45 +720,31 @@ $ axe example.com
     </div>
   </div>
 
-  <script src="js/reveal.min.js"></script>
+  <script src="dist/reveal.js"></script>
 
+  <script src="dist/plugin/notes/notes.js"></script>
+  <script src="dist/plugin/search/search.js"></script>
+  <script src="dist/plugin/highlight/highlight.js"></script>
+
+  <!-- TODO: use new plugin format  -->
+  <script src="dist/plugin/theme-toggle/theme-toggle.js"></script>
   <script>
-
-    // More info https://github.com/hakimel/reveal.js#configuration
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
     Reveal.initialize({
       controls: false,
+      controlsTutorial: false,
       progress: true,
       history: true,
       center: true,
       hash: true,
-      controlsTutorial: false,
       autoPlayMedia: true,
 
       transition: 'none', // none/fade/slide/convex/concave/zoom
 
-      // More info https://github.com/hakimel/reveal.js#dependencies
-      dependencies: [
-        {
-          src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-            hljs.initHighlightingOnLoad();
-          }
-        },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/theme-toggle/theme-toggle.js'}
-      ]
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [ RevealSearch, RevealHighlight, RevealNotes],
     });
-
-  </script>
-
-  <script>
-    // Print stylesheet
-    if (window.location.search.match( /print-pdf/gi )) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
   </script>
 </body>
 </html>
