@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>Atomic Design</title>
+
+  <style>
+    body {
+      font-family: Anaheim;
+    }
+    .component {
+      padding: 20px;
+      /*background-color: #eee;*/
+    }
+    .headline {
+      margin: 0 0 10px;
+    }
+  </style>
+
+  <style>
+    .link { color: blue; }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="component">
+    <a class="link" href="#">Link</a>
+  </div>
+
+
+  <hr>
+
+  <div class="component">
+    <h2 class="headline">Headline</h2>
+  </div>
+
+  <hr>
+
+  <div class="component">
+    <nav class="navigation">
+      <h2 class="headline">Menu</h2>
+      <a class="link" href="/">Home</a>
+      <a class="link" href="/blog">Blog</a>
+      <a class="link" href="/about">About</a>
+    </nav>
+  </div>
+
+</body>
+</html>
