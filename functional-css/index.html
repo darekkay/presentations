@@ -9,31 +9,33 @@
 
   <title>Functional CSS</title>
 
-  <link rel="stylesheet" href="dist/reset.css">
-  <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/dk-dark.css" id="theme">
+  <link rel="stylesheet" href="../.revealjs/reset.css">
+  <link rel="stylesheet" href="../.revealjs/reveal.css">
+  <link rel="stylesheet" href="../.revealjs/theme/dk-dark.css" id="theme">
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-      <section>
+            <section>
         <h1>Functional CSS</h1>
         <h2 class="h3">What's all the hype about?</h2>
         <p style="margin-bottom: 40px;"><mark>Dariusz Winkler</mark></p>
-        <small class="d-flex flex-col align-center float-left">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
-        </small>
-        <small class="d-flex flex-col align-center float-right">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
-        </small>
+        <div class="d-flex justify-around">
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+            <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+          </small>
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+            <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+          </small>
+        </div>
 
         
         <div id="schedule"></div>
       </section>
-
+      
 <section class="slide level2">
 
 <p><img data-src="assets/css-awesome.png"></p>
@@ -91,9 +93,12 @@
 <section id="methodologies" class="slide level2">
 <h2>Methodologies</h2>
 <ul>
-<li><a href="http://getbem.com" target="_blank" rel="noopener">BEM</a> (Blocks, Elements, Modifiers)</li>
-<li><a href="http://smacss.com/" target="_blank" rel="noopener">SMACSS</a> (Scalable and Modular Architecture for CSS)</li>
-<li><a href="https://github.com/stubbornella/oocss/wiki" target="_blank" rel="noopener">OOCSS</a> (Object-Oriented CSS)
+<li><a href="http://getbem.com">BEM</a> (Blocks, Elements,
+Modifiers)</li>
+<li><a href="http://smacss.com/">SMACSS</a> (Scalable and Modular
+Architecture for CSS)</li>
+<li><a href="https://github.com/stubbornella/oocss/wiki">OOCSS</a>
+(Object-Oriented CSS)
 </li><li class="fragment highlight-1">
 Functional CSS
 </li>
@@ -155,7 +160,8 @@ Functional CSS
 </section>
 <section id="css-preprocessor" class="slide level2">
 <h2>2. CSS Preprocessor</h2>
-<p><span class="citation" data-cites="extend">@extend</span> or mixin</p>
+<p><span class="citation" data-cites="extend">@extend</span> or
+mixin</p>
 <pre class="scss"><code>.article-preview          { @extend .author-bio; }
 .article-preview__image   { @extend .author-bio__image; }
 .article-preview__content { @extend .author-bio__content; }
@@ -186,9 +192,11 @@ Functional CSS
 <section id="semantic-class-names" class="slide level2">
 <h2>Semantic class names</h2>
 <blockquote>
-<p>“[…] authors are encouraged to use values that describe the <span class="highlight-1"><strong>nature of the content</strong></span>, rather than values that describe the desired <span class="highlight-2"><strong>presentation of the content</strong></span>.”</p>
+<p>“[…] authors are encouraged to use values that describe the <span class="highlight-1"><strong>nature of the content</strong></span>,
+rather than values that describe the desired <span class="highlight-2"><strong>presentation of the
+content</strong></span>.”</p>
 </blockquote>
-<p><small class="float-right"><a href="https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#classes" target="_blank" rel="noopener">w3.org</a></small></p>
+<p><small class="float-right"><a href="https://www.w3.org/TR/2016/REC-html51-20161101/dom.html#classes">w3.org</a></small></p>
 <p><br></p>
 <div class="clear-both fragment">
 <pre class="css"><code>.bold        { font-weight: bold }  /* presentational */
@@ -200,7 +208,8 @@ Functional CSS
 <section class="slide level2">
 
 <blockquote>
-<p>“HTML is for content. CSS is for styling. Separate your concerns.”</p>
+<p>“HTML is for content. CSS is for styling. Separate your
+concerns.”</p>
 </blockquote>
 <div class="text-right">
 <small class="highlight-2">Frontend developers</small>
@@ -224,15 +233,19 @@ Functional CSS
 </section>
 <section class="slide level2">
 
-<div class="d-flex font-3">
+<div class="d-flex justify-around font-3">
 <div style="margin-right: 2rem;">
-<h3 id="semantic-classnames">“Semantic” classnames</h3>
+<h3>
+“Semantic” classnames
+</h3>
 <p><strike>“Separation of concerns”</strike></p>
 <p><span class="highlight-2">CSS depends on HTML</span></p>
 <p><span class="highlight-1">HTML is restyleable!</span></p>
 </div>
 <div style="margin-left: 2rem;">
-<h3 id="presentational-classnames">Presentational classnames</h3>
+<h3>
+Presentational classnames
+</h3>
 <p><strike>“Mixing concerns”</strike></p>
 <p><span class="highlight-2">HTML depends on CSS</span></p>
 <p><span class="highlight-1">CSS is reusable!</span></p>
@@ -248,13 +261,15 @@ Functional CSS
 <h2>Functional CSS</h2>
 <div class="fragment">
 <blockquote>
-<p>“… is the approach to CSS architecture that favors small, <span class="highlight-1">single-purpose classes</span> with names based on <span class="highlight-2">visual function</span>.”</p>
+<p>“… is the approach to CSS architecture that favors small, <span class="highlight-1">single-purpose classes</span> with names based on
+<span class="highlight-2">visual function</span>.”</p>
 </blockquote>
 </div>
 <div class="fragment">
 <p>Also known as</p>
 <ul>
-<li>Atomic CSS (≠ <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener">Atomic Design</a>)</li>
+<li>Atomic CSS (≠ <a href="http://bradfrost.com/blog/post/atomic-web-design/">Atomic
+Design</a>)</li>
 <li>Utility-first CSS</li>
 </ul>
 </div>
@@ -270,15 +285,15 @@ Functional CSS
 .font-weight-bold  { font-weight: bold }
 .red               { color: red }</code></pre>
 <div class="fragment">
-<pre class="css"><code>.font-16           { font-size: 16px }
-.font-20           { font-size: 20px }
-.font-28           { font-size: 28px }</code></pre>
+<pre class="css"><code>.font-16 { font-size: 16px }
+.font-20 { font-size: 20px }
+.font-28 { font-size: 28px }</code></pre>
 </div>
 <div class="fragment">
-<pre class="css"><code>.margin-1          { margin: 0.5rem }
-.margin-2          { margin: 1rem }
-.margin-3          { margin: 2rem }
-.margin-x-2        { margin-left: 1rem; margin-right: 1rem }</code></pre>
+<pre class="css"><code>.margin-1   { margin: 0.5rem }
+.margin-2   { margin: 1rem }
+.margin-3   { margin: 2rem }
+.margin-x-2 { margin-left: 1rem; margin-right: 1rem }</code></pre>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -363,7 +378,8 @@ Functional CSS
 <section id="naming-is-hard" class="slide level2">
 <h2>Naming is hard</h2>
 <blockquote>
-<p>There are 2 hard problems in computer science: cache invalidation, <strong>naming things</strong>, and off-by-1 errors.</p>
+<p>There are 2 hard problems in computer science: cache invalidation,
+<strong>naming things</strong>, and off-by-1 errors.</p>
 </blockquote>
 <p><br></p>
 <div class="fragment">
@@ -384,9 +400,11 @@ Functional CSS
   &lt;div class=&quot;flex-1&quot;&gt;Alex&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <blockquote>
-<p>“You know how many times I’ve had to think of a name for a random container that exists <strong>simply to align some crap</strong>?”</p>
+<p>“You know how many times I’ve had to think of a name for a random
+container that exists <strong>simply to align some crap</strong>?”</p>
 </blockquote>
-<p><small class="float-right"><a href="https://news.ycombinator.com/item?id=18085013" target="_blank" rel="noopener">Hacker News</a></small></p>
+<p><small class="float-right"><a href="https://news.ycombinator.com/item?id=18085013">Hacker
+News</a></small></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -397,7 +415,7 @@ Functional CSS
 .nav-item { color: red }</code></pre>
 <div class="fragment">
 <p><img data-src="assets/css-specifity.png"></p>
-<p><small class="float-right"><a href="https://twitter.com/iamdevloper/status/1039997267426660353" target="_blank" rel="noopener">Twitter</a></small></p>
+<p><small class="float-right"><a href="https://twitter.com/iamdevloper/status/1039997267426660353">Twitter</a></small></p>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -414,7 +432,7 @@ Functional CSS
 </section>
 <section class="slide level2">
 
-<p><img data-src="assets/mythbusters.jpg"></p>
+<p><img src="assets/mythbusters.jpg" width="800"></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
@@ -432,7 +450,7 @@ Functional CSS
 <li>Use templates / components</li>
 </ul>
 
-<pre class="ejs"><code>&lt;button class=&quot;bg-blue-500 hover:bg-blue-700 text-white
+<pre class="twig"><code>&lt;button class=&quot;bg-blue-500 hover:bg-blue-700 text-white
                font-bold py-2 px-4 rounded&quot;&gt;
   &lt;%= label %&gt;
   &lt;% if (icon) { %&gt;
@@ -443,7 +461,8 @@ Functional CSS
 <div class="fragment">
 <ul>
 <li>Search and replace</li>
-<li>Extract common component (<code>.btn</code>, <code>.modal</code>)</li>
+<li>Extract common component (<code>.btn</code>,
+<code>.modal</code>)</li>
 </ul>
 </div>
 
@@ -455,7 +474,7 @@ Functional CSS
 <li>No more premature abstraction</li>
 <li>No unnecessary bloat and complexity</li>
 <li>Mix with other methodologies</li>
-<li>TailwindCSS <a href="https://tailwindcss.com/docs/extracting-components/#extracting-css-components-with-apply" target="_blank" rel="noopener">@apply</a>:</li>
+<li>TailwindCSS <a href="https://tailwindcss.com/docs/extracting-components/#extracting-css-components-with-apply">@apply</a>:</li>
 </ul>
 <pre class="html"><code>&lt;button class=&quot;btn-blue&quot;&gt;Button&lt;/button&gt;
 
@@ -544,9 +563,12 @@ Are both patterns equal?
 <section id="theming" class="slide level2">
 <h2>Theming</h2>
 <ul>
-<li><code>.margin-20</code> <span class="fragment highlight-1"> → <code>.margin-3</code></span></li>
-<li><code>.font-16</code> <span class="fragment highlight-2"> → <code>.font-300</code> / <code>.font-medium</code></span></li>
-<li><code>.color-blue</code> <span class="fragment highlight-3"> → <code>.color-primary</code></span></li>
+<li><code>.margin-20</code> <span class="fragment highlight-1"> →
+<code>.margin-3</code></span></li>
+<li><code>.font-16</code> <span class="fragment highlight-2"> →
+<code>.font-300</code> / <code>.font-medium</code></span></li>
+<li><code>.color-blue</code> <span class="fragment highlight-3"> →
+<code>.color-primary</code></span></li>
 </ul>
 <div class="fragment">
 <p>Use abstract over absolute units</p>
@@ -565,7 +587,8 @@ Are both patterns equal?
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="performance-expensive-selectors" class="slide level2">
-<h2>Performance: <span class="highlight-1">Expensive selectors</span></h2>
+<h2>Performance: <span class="highlight-1">Expensive
+selectors</span></h2>
 <pre class="css"><code>/* expensive */
 header#admin-main-header.header--bar-right-part li &gt; a {
   line-height: 35px
@@ -600,7 +623,7 @@ header#admin-main-header.header--bar-right-part li &gt; a {
 </ul></li>
 <li><span class="highlight-4">Remove unused CSS</span>:
 <ul>
-<li><a href="https://github.com/FullHuman/purgecss" target="_blank" rel="noopener">PurgeCSS</a>, <a href="https://github.com/purifycss/purifycss" target="_blank" rel="noopener">PurifyCSS</a>, <a href="https://github.com/uncss/uncss" target="_blank" rel="noopener">UnCSS</a>, …</li>
+<li><a href="https://github.com/FullHuman/purgecss">PurgeCSS</a>, <a href="https://github.com/purifycss/purifycss">PurifyCSS</a>, <a href="https://github.com/uncss/uncss">UnCSS</a>, …</li>
 <li>Avoid dynamic class names</li>
 </ul></li>
 </ul>
@@ -627,11 +650,13 @@ header#admin-main-header.header--bar-right-part li &gt; a {
 <section id="frameworks" class="slide level2">
 <h2>Frameworks</h2>
 <ul>
-<li><strong><a href="https://tailwindcss.com" target="_blank" rel="noopener">Tailwind CSS</a></strong></li>
-<li><a href="https://tachyons.io/" target="_blank" rel="noopener">Tachyons</a></li>
-<li><a href="https://basscss.com/" target="_blank" rel="noopener">BassCSS</a></li>
-<li><a href="http://buildwithbeard.com/" target="_blank" rel="noopener">Beard</a></li>
-<li><a href="https://getbootstrap.com/docs/4.0/utilities" target="_blank" rel="noopener">Bootstrap Utilities</a></li>
+<li><strong><a href="https://tailwindcss.com">Tailwind
+CSS</a></strong></li>
+<li><a href="https://tachyons.io/">Tachyons</a></li>
+<li><a href="https://basscss.com/">BassCSS</a></li>
+<li><a href="http://buildwithbeard.com/">Beard</a></li>
+<li><a href="https://getbootstrap.com/docs/4.0/utilities">Bootstrap
+Utilities</a></li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -639,31 +664,34 @@ header#admin-main-header.header--bar-right-part li &gt; a {
 <section id="in-the-wild" class="slide level2">
 <h2>In the wild</h2>
 <ul>
-<li><a href="https://www.yahoo.com/" target="_blank" rel="noopener">Yahoo!</a></li>
-<li><a href="https://www.twitch.tv/" target="_blank" rel="noopener">Twitch</a></li>
-<li><a href="https://medium.com/" target="_blank" rel="noopener">Medium</a></li>
-<li><a href="https://www.kickstarter.com/" target="_blank" rel="noopener">Kickstarter</a></li>
-<li><a href="https://www.buzzfeed.com" target="_blank" rel="noopener">BuzzFeed</a></li>
-<li><a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia</a></li>
-<li><a href="https://www.ted.com" target="_blank" rel="noopener">TED Talks</a></li>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a></li>
+<li><a href="https://www.yahoo.com/">Yahoo!</a></li>
+<li><a href="https://www.twitch.tv/">Twitch</a></li>
+<li><a href="https://medium.com/">Medium</a></li>
+<li><a href="https://www.kickstarter.com/">Kickstarter</a></li>
+<li><a href="https://www.buzzfeed.com">BuzzFeed</a></li>
+<li><a href="https://www.algolia.com/">Algolia</a></li>
+<li><a href="https://www.ted.com">TED Talks</a></li>
+<li><a href="https://www.npmjs.com/">npm</a></li>
 <li>…</li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="my-experience-enterprise-project" class="slide level2">
-<h2>My experience: <span class="highlight-1">Enterprise project</span></h2>
+<h2>My experience: <span class="highlight-1">Enterprise
+project</span></h2>
 <ul>
 <li>Based on Bootstrap</li>
 <li>Gradual shift to utility-<em>heavy</em> usage</li>
-<li>Good for theming, <strong>not</strong> good for brand-specific designs</li>
+<li>Good for theming, <strong>not</strong> good for brand-specific
+designs</li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="my-experience-personal-project" class="slide level2">
-<h2>My experience: <span class="highlight-1">Personal project</span></h2>
+<h2>My experience: <span class="highlight-1">Personal
+project</span></h2>
 <ul>
 <li>Great developer experience</li>
 <li>35 React components</li>
@@ -680,13 +708,17 @@ header#admin-main-header.header--bar-right-part li &gt; a {
 <h2>Facebook Redesign</h2>
 <ul>
 <li class="fragment">
-<span class="highlight-1">2 MB</span> uncompressed CSS (400 KB compressed). <span class="highlight-1">10% used</span> for initial render.
+<span class="highlight-1">2 MB</span> uncompressed CSS (400 KB
+compressed). <span class="highlight-1">10% used</span> for initial
+render.
 </li>
 <li class="fragment">
-<span class="highlight-2">Difficult to identify</span> whether various CSS rules were <span class="highlight-2">still in use</span>.
+<span class="highlight-2">Difficult to identify</span> whether various
+CSS rules were <span class="highlight-2">still in use</span>.
 </li>
 <li class="fragment">
-Changes in one file could <span class="highlight-3">break the styles in another</span> without the author realizing it.
+Changes in one file could <span class="highlight-3">break the styles in
+another</span> without the author realizing it.
 </li>
 <li class="fragment">
 CSS precedence depends on <span class="highlight-4">ordering</span>.
@@ -695,31 +727,38 @@ CSS precedence depends on <span class="highlight-4">ordering</span>.
 <div class="fragment">
 ⇒ Generating Atomic CSS at <strong>build time</strong>.
 </div>
-<p><small class="float-right"><a href="https://engineering.fb.com/web/facebook-redesign/" target="_blank" rel="noopener">https://engineering.fb.com/web/facebook-redesign/</a></small></p>
+<p><small class="float-right"><a href="https://engineering.fb.com/web/facebook-redesign/">https://engineering.fb.com/web/facebook-redesign/</a></small></p>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section id="no-silver-bullet" class="slide level2">
 <h2>No silver bullet</h2>
 <ul>
-<li><span class="highlight-1">Tooling</span> required for best performance</li>
+<li><span class="highlight-1">Tooling</span> required for best
+performance</li>
 <li><span class="highlight-2">Templating</span> recommended</li>
-<li>Not suitable for <span class="highlight-3">highly individual themes</span></li>
-<li>Often not suitable for styling <span class="highlight-4">3rd-party components</span></li>
-<li>Most <span class="highlight-1">UI Frameworks</span> don’t use Functional CSS</li>
+<li>Not suitable for <span class="highlight-3">highly individual
+themes</span></li>
+<li>Often not suitable for styling <span class="highlight-4">3rd-party
+components</span></li>
+<li>Most <span class="highlight-1">UI Frameworks</span> don’t use
+Functional CSS</li>
 </ul>
 
 <!-- ----------------------------------------------------------------------- -->
 </section>
 <section class="slide level2">
 
-<p>If you love the way you write CSS and don’t want to change… <strong>then don’t</strong>.</p>
+<p>If you love the way you write CSS and don’t want to change…</p>
+<p><strong>then don’t</strong>.</p>
 <div class="fragment">
 <p><strong>… but</strong></p>
 <blockquote>
-<p>“You have to be prepared to disgard old ideas, look at alternatives, and even revisit ways that you may have previously dismissed.”</p>
+<p>“You have to be prepared to disgard old ideas, look at alternatives,
+and even revisit ways that you may have previously dismissed.”</p>
 </blockquote>
-<p><small class="float-right"><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank" rel="noopener">Nicolas Gallagher</a></small></p>
+<p><small class="float-right"><a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">Nicolas
+Gallagher</a></small></p>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -727,8 +766,10 @@ CSS precedence depends on <span class="highlight-4">ordering</span>.
 <section id="resources" class="slide level2">
 <h2>Resources</h2>
 <ul>
-<li><a href="https://github.com/winkerVSbecks/awesome-functional-css" target="_blank" rel="noopener">Awesome Functional CSS</a></li>
-<li><a href="https://johnpolacek.github.io/the-case-for-atomic-css/" target="_blank" rel="noopener">The Case for Atomic CSS</a></li>
+<li><a href="https://github.com/winkerVSbecks/awesome-functional-css">Awesome
+Functional CSS</a></li>
+<li><a href="https://johnpolacek.github.io/the-case-for-atomic-css/">The
+Case for Atomic CSS</a></li>
 </ul>
 
 </section>
@@ -745,31 +786,36 @@ CSS precedence depends on <span class="highlight-4">ordering</span>.
           </a>
         </p>
         <p style="padding-bottom: 20px;">Dariusz Winkler</p>
-        <small class="d-flex flex-col align-center float-left">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
-        </small>
-        <small class="d-flex flex-col align-center float-right">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
-        </small>
+        <div class="d-flex justify-around">
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+            <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+          </small>
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+            <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+          </small>
+        </div>
       </section>
-
+      
     </div>
   </div>
 
-  <script src="dist/reveal.js"></script>
+  <script src="../.revealjs/reveal.js"></script>
 
-  <script src="dist/plugin/notes/notes.js"></script>
-  <script src="dist/plugin/search/search.js"></script>
-  <script src="dist/plugin/highlight/highlight.js"></script>
+  <script src="../.revealjs/plugin/notes/notes.js"></script>
+  <script src="../.revealjs/plugin/search/search.js"></script>
+  <script src="../.revealjs/plugin/highlight/highlight.js"></script>
 
   <!-- TODO: use new plugin format  -->
-  <script src="dist/plugin/theme-toggle/theme-toggle.js"></script>
+  <script src="../.revealjs/plugin/theme-toggle/theme-toggle.js"></script>
   <script>
     // Also available as an ES module, see:
     // https://revealjs.com/initialization/
     Reveal.initialize({
+      width: 1200,
+      height: 720,
+
       controls: false,
       controlsTutorial: false,
       progress: true,

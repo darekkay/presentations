@@ -14,9 +14,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="dist/reset.css">
-  <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/dk-dark.css" id="theme">
+  <link rel="stylesheet" href="../.revealjs/reset.css">
+  <link rel="stylesheet" href="../.revealjs/reveal.css">
+  <link rel="stylesheet" href="../.revealjs/theme/dk-dark.css" id="theme">
 </head>
 
 <body>
@@ -28,14 +28,20 @@
         <h1>Accessible Web</h1>
         <h2 class="h3">Barrierefreies Internet</h2>
         <p style="margin-bottom: 40px;"><mark>Dariusz Winkler</mark></p>
-        <small class="d-flex flex-col align-center float-left">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
-        </small>
-        <small class="d-flex flex-col align-center float-right">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
-        </small>
+        <div class="d-flex justify-around">
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+            <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+          </small>
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+            </svg>
+            <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+          </small>
+        </div>
 
         
         <div id="schedule"></div>
@@ -62,7 +68,7 @@
 
 
       <section>
-        <h2>„... the site's content is available, and its functionality can be operated, by literally
+        <h2>„... the site's content is available, <br>and its functionality can be operated, <br>by literally
           <mark>anyone</mark> .”</h2>
         <small class="float-right">
           <a href="https://developers.google.com/web/fundamentals/accessibility/" target="_blank" rel="noopener">⇒ google.com</a>
@@ -75,7 +81,7 @@
 
       <section>
         <h2>Requirements</h2>
-        <div class="d-flex" style="justify-content: space-between">
+        <div class="d-flex justify-around">
           <ul>
             <li>Responsiveness</li>
             <li>Performance</li>
@@ -107,7 +113,6 @@
       </section>
 
 
-
       <section>
         <h2>Legal requirements</h2>
 
@@ -117,7 +122,6 @@
 
         
       </section>
-
 
 
       <section>
@@ -133,7 +137,6 @@
       </section>
 
 
-
       <section>
         <h2>The cost of accessibility</h2>
         <ul>
@@ -146,7 +149,6 @@
       </section>
 
 
-
       <section>
         <h2><span class="highlight-1">How</span> do I make my site more accessible?</h2>
         
@@ -154,9 +156,8 @@
       </section>
 
 
-
       <section>
-        <h2>Web Content Accessibility Guidelines (WCAG 2.1)</h2>
+        <h2>Web Content Accessibility Guidelines<br>(WCAG 2.1)</h2>
         <small class="float-right">
           <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">⇒ w3.org/TR/WCAG21/</a>
         </small>
@@ -185,9 +186,6 @@
         
 
       </section>
-
-
-
 
 
       <section>
@@ -234,7 +232,7 @@
       <section>
         <h2>Do not depend on color</h2>
         <img src="assets/color-blind.png" width="634" height="512" alt="Showcase for red-green color blindness.">
-        <div class="fragment fade-out chunk" style="bottom: 0; right: 0; height: 580px; width: 520px;"></div>
+        <div class="fragment fade-out chunk" style="bottom: 0; right: 0; height: 580px; width: 600px;"></div>
         <div class="fragment fade-out chunk" style="bottom: 0; height: 320px; width: 100%;"></div>
 
         
@@ -244,26 +242,28 @@
 
 
       <section data-background="#fff">
-        <h2 style="color: #979797">Color contrast</h2>
+        <h2 style="color: #979797; text-shadow: none;">Color contrast</h2>
         <p style="color: #979797">While grey on white is quite popular on the web, this text fails
           even AA level.
         </p>
 
-        <p class="float-left">
-          <img src="assets/contrast-chrome.png" width="232" height="310" alt="Contrast ratio rating">
-          <small style="display: block; text-align: left;">
-            <a href="https://developers.google.com/web/updates/2018/01/devtools#contrast" target="_blank" rel="noopener">
-              ⇒ Chrome 65+ </a>
-          </small>
-        </p>
-        <p class="float-right">
-          <img src="assets/contrast-ratio.png" width="482" height="136" alt="Contrast ratio rating">
-          <small style="display: block; text-align: right;">
-            <a href="http://leaverou.github.io/contrast-ratio/" target="_blank" rel="noopener">
-              ⇒ Calculate Contrast Ratio
-            </a>
-          </small>
-        </p>
+        <div class="d-flex justify-around">
+          <div>
+            <img src="assets/contrast-chrome.png" width="232" height="310" alt="Contrast ratio rating">
+            <small style="display: block; text-align: left;">
+              <a href="https://developers.google.com/web/updates/2018/01/devtools#contrast" target="_blank" rel="noopener">
+                ⇒ Chrome 65+ </a>
+            </small>
+          </div>
+          <div>
+            <img src="assets/contrast-ratio.png" width="482" height="136" alt="Contrast ratio rating">
+            <small style="display: block; text-align: right;">
+              <a href="http://leaverou.github.io/contrast-ratio/" target="_blank" rel="noopener">
+                ⇒ Calculate Contrast Ratio
+              </a>
+            </small>
+          </div>
+        </div>
 
         
 
@@ -315,7 +315,9 @@
               </li>
             </ul>
           </li>
-          <li class="fragment">Provide <a href="https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/" target="_blank" rel="noopener">page language</a> in HTML</li>
+          <li class="fragment">Provide
+            <a href="https://developer.paciellogroup.com/blog/2016/06/using-the-html-lang-attribute/" target="_blank" rel="noopener">page language</a> in HTML
+          </li>
         </ul>
 
         
@@ -409,17 +411,17 @@
           <tr>
             <td class="bg-highlight">Hidden</td>
             <td><code>.sr-only</code></td>
-            <td><code>display: none;<br>visibility: hidden;</code></td>
+            <td><code>display: none;</code><br><code>visibility: hidden;</code></td>
           </tr>
           </tbody>
         </table>
         <pre class="fragment"><code class="hljs css" data-trim="">
-.sr-only {              /* From: Bootstrap 4 */
-  position:absolute;    overflow: hidden;
-  width:1px;            height:1px;
-  padding:0;            border:0;
-  clip:rect(0,0,0,0);   clip-path:inset(50%);
-  white-space:nowrap;                         }
+.sr-only {    /* From: Bootstrap 4 */
+  position:absolute;         overflow: hidden;
+  width:1px;                 height:1px;
+  padding:0;                 border:0;
+  clip:rect(0,0,0,0);        clip-path:inset(50%);
+  white-space:nowrap; }
           </code></pre>
 
         
@@ -481,7 +483,6 @@
       </section>
 
 
-
       <section>
         <h2>Alternative texts</h2>
 
@@ -494,7 +495,6 @@
 
         
       </section>
-
 
 
       <section>
@@ -522,7 +522,6 @@
       </section>
 
 
-
       <section>
         <h2>Labels</h2>
         <ul>
@@ -539,8 +538,6 @@
 
         
       </section>
-
-
 
 
       <section>
@@ -575,8 +572,6 @@
       </section>
 
 
-
-
       <section>
         <h2 class="monospace">a<span class="highlight-1">ccessibilit</span>y</h2>
         <div class="h2">↓</div>
@@ -585,8 +580,6 @@
         
 
       </section>
-
-
 
 
       <section>
@@ -603,7 +596,6 @@ $ axe example.com
 
         
       </section>
-
 
 
       <section>
@@ -631,7 +623,6 @@ $ axe example.com
       </section>
 
 
-
       <section>
         <p>Tools can detect <span class="highlight-1">only 20% to 50%</span> of all accessibility issues.</p>
         <p class="fragment"><span class="highlight-2">Manual testing</span> is always required.</p>
@@ -652,7 +643,6 @@ $ axe example.com
       -->
 
 
-
       <section>
         <h2>Accessibility Review</h2>
         <ol>
@@ -662,7 +652,6 @@ $ axe example.com
           <li><span class="highlight-4">Screen reader</span> testing</li>
         </ol>
       </section>
-
 
 
       <section>
@@ -675,24 +664,18 @@ $ axe example.com
       </section>
 
 
-
-
-
       <section>
-        <h2>Accessibility doesn't just happen, <mark>you</mark> have to make it happen.</h2>
+        <h2>Accessibility doesn't just happen,<br> <mark>you</mark> have to make it happen.</h2>
         
       </section>
 
 
-
-
       <section>
-        <h2>Accessibility is about <mark>equal</mark> treatment, not <span class="highlight-2">special</span> treatment.</h2>
+        <h2>Accessibility is about <mark>equal</mark> treatment,<br> not <span class="highlight-2">special</span> treatment.
+        </h2>
 
         
       </section>
-
-
 
 
       <section style="font-size: 1.2em;">
@@ -707,31 +690,40 @@ $ axe example.com
           </a>
         </p>
         <p style="padding-bottom: 20px;">Dariusz Winkler</p>
-        <small class="d-flex flex-col align-center float-left">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-          <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
-        </small>
-        <small class="d-flex flex-col align-center float-right">
-          <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
-        </small>
+        <div class="d-flex justify-around">
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+            <a href="https://twitter.com/darek_kay" target="_blank" rel="noopener">@darek_kay</a>
+          </small>
+          <small class="d-flex flex-col align-center">
+            <svg aria-hidden="true" focusable="false" class="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
+            </svg>
+            <a href="https://darekkay.com" target="_blank" rel="noopener">darekkay.com</a>
+          </small>
+        </div>
       </section>
 
     </div>
   </div>
 
-  <script src="dist/reveal.js"></script>
+  <script src="../.revealjs/reveal.js"></script>
 
-  <script src="dist/plugin/notes/notes.js"></script>
-  <script src="dist/plugin/search/search.js"></script>
-  <script src="dist/plugin/highlight/highlight.js"></script>
+  <script src="../.revealjs/plugin/notes/notes.js"></script>
+  <script src="../.revealjs/plugin/search/search.js"></script>
+  <script src="../.revealjs/plugin/highlight/highlight.js"></script>
 
   <!-- TODO: use new plugin format  -->
-  <script src="dist/plugin/theme-toggle/theme-toggle.js"></script>
+  <script src="../.revealjs/plugin/theme-toggle/theme-toggle.js"></script>
   <script>
     // Also available as an ES module, see:
     // https://revealjs.com/initialization/
     Reveal.initialize({
+      width: 1200,
+      height: 720,
+
       controls: false,
       controlsTutorial: false,
       progress: true,
@@ -740,10 +732,10 @@ $ axe example.com
       hash: true,
       autoPlayMedia: true,
 
-      transition: 'none', // none/fade/slide/convex/concave/zoom
+      transition: "none", // none/fade/slide/convex/concave/zoom
 
       // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [ RevealSearch, RevealHighlight, RevealNotes],
+      plugins: [RevealSearch, RevealHighlight, RevealNotes],
     });
   </script>
 </body>
