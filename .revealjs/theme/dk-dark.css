@@ -2,33 +2,29 @@
  * Dark theme, based on Night
  */
 /* Provides a good contrast against grades < 10 while keeping a "vivid" look */
-/* lato-regular - latin */
+/* nunito regular */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("./fonts/lato-v23-latin-regular.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-regular.woff2") format("woff2");
 }
-/* lato-italic - latin */
+/* nunito italic */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("./fonts/lato-v23-latin-italic.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-italic.woff2") format("woff2");
 }
-/* lato-700 - latin (mapped to 900) */
+/* nunito bold */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("./fonts/lato-v23-latin-900.woff2") format("woff2");
-}
-/* lato-700italic - latin (mapped to 900) */
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 700;
-  src: local(""), url("./fonts/lato-v23-latin-900italic.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-700.woff2") format("woff2");
 }
 /* oswald-500 - latin */
 @font-face {
@@ -44,12 +40,21 @@
   font-weight: 400;
   src: local(""), url("./fonts/ubuntu-mono-v15-latin-regular.woff2") format("woff2");
 }
+.reveal .progress > span {
+  background: linear-gradient(to right, #ffbe2e, #f1486d);
+}
+
+.reveal .slides img,
+.reveal .slides video {
+  box-shadow: #090c0f 1px 0 10px;
+}
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
   --r-background-color: #1f303e;
-  --r-main-font: Lato, sans-serif;
+  --r-main-font: Nunito, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #eee;
   --r-block-margin: 20px;
@@ -348,7 +353,9 @@
  *********************************************/
 .reveal a {
   color: var(--r-link-color);
-  text-decoration: none;
+  text-decoration-style: dashed;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
   transition: color 0.15s ease;
 }
 
@@ -435,18 +442,6 @@
   display: block;
 }
 
-.reveal .red {
-  color: red;
-}
-
-.reveal .green {
-  color: green;
-}
-
-.reveal .orange {
-  color: #f76707;
-}
-
 .reveal .font-1 {
   font-size: 25px;
 }
@@ -461,6 +456,10 @@
 
 .reveal .font-4 {
   font-size: 40px;
+}
+
+.reveal .decoration-none {
+  text-decoration: none;
 }
 
 .bg-highlight {
@@ -481,18 +480,6 @@
 
 .reveal .highlight-4 {
   color: #29e1cb;
-}
-
-.reveal .red {
-  color: #ee83ff;
-}
-
-.reveal .green {
-  color: #a7e22e;
-}
-
-.reveal .orange {
-  color: #fe9720;
 }
 
 .border {

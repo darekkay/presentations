@@ -25,18 +25,26 @@
 
     <div class="slides">
       <section>
-        <h1>Accessible Web</h1>
-        <h2 class="h3">Barrierefreies Internet</h2>
-        <p style="margin-bottom: 40px;"><mark>Dariusz Winkler</mark></p>
-        <div class="d-flex justify-center align-center font-2">
-          <svg aria-hidden="true" focusable="false" class="icon" style="margin-right: 10px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener" class="monospace">darekkay.com</a>
+        <div class="flex justify-around">
+          <div class="flex flex-col justify-center" style="margin-right: 100px; max-width: 250px;">
+            <div>
+              <img class="rounded" src="../.revealjs/assets/avatar.jpg" width="400" alt="">
+            </div>
+            <div class="font-bold" style="margin-bottom: 20px;">Dariusz Winkler</div>
+            <div>
+              <div class="d-flex justify-center align-center font-3">
+                <svg aria-hidden="true" focusable="false" class="icon" style="margin-right: 10px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
+                <a href="https://darekkay.com" target="_blank" rel="noopener" class="monospace decoration-none">darekkay.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h1>Accessible Web</h1>
+            <h2 class="h3">Barrierefreies Internet</h2>
+          </div>
         </div>
-
         
-        <div id="schedule"></div>
       </section>
-
 
       <section>
         <h2 class="highlight-1">What?</h2>
@@ -65,9 +73,22 @@
         </small>
 
         
-
       </section>
 
+      <section>
+        <div><img src="assets/personas.png" alt=""></div>
+        <div><small style="margin-left: 30px; margin-bottom: 18px;"><a href="https://inclusive.microsoft.design/" target="_blank" rel="noopener">⇒ Microsoft Inclusive Design</a></small></div>
+        
+      </section>
+
+
+      <section>
+        <h2><span class="highlight-1">Impairments</span> are not an accessibility problem. <br> It's the <span class="highlight-2">barriers</span> we create.</h2>
+        <div class="fragment">
+          <img src="assets/stairs.jpg" alt="">
+        </div>
+        
+      </section>
 
       <section>
         <h2>Requirements</h2>
@@ -147,7 +168,7 @@
 
 
       <section>
-        <h2>Web Content Accessibility Guidelines<br>(WCAG 2.1)</h2>
+        <h2>Web Content Accessibility Guidelines<br>(WCAG 2.2)</h2>
         <small class="float-right">
           <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener">⇒ w3.org/TR/WCAG21/</a>
         </small>
@@ -179,13 +200,7 @@
 
 
       <section>
-        <h2>Different preconditions</h2>
-        <ul class="h3">
-          <li>Motor disabilities</li>
-          <li>Blindness / Low vision</li>
-          <li>Deafness</li>
-          <li>Cognitive disabilities</li>
-        </ul>
+        <h2>Demo</h2>
         
       </section>
 
@@ -248,7 +263,7 @@
           <div>
             <img src="assets/contrast-ratio.png" width="482" height="136" alt="Contrast ratio rating">
             <small style="display: block; text-align: right;">
-              <a href="http://leaverou.github.io/contrast-ratio/" target="_blank" rel="noopener">
+              <a href="https://www.siegemedia.com/contrast-ratio" target="_blank" rel="noopener">
                 ⇒ Calculate Contrast Ratio
               </a>
             </small>
@@ -360,14 +375,14 @@
       <section>
         <h2>Links vs. Buttons </h2>
 
-        <ul>
+        <p><img src="assets/link-vs-button.png" width="587" height="202" alt="Example for using links vs buttons."></p>
+
+        <ul class="fragment">
           <li><mark>&lt;a&gt;</mark> - Link one file to another</li>
           <li><mark>&lt;button&gt;</mark> - Trigger actions</li>
         </ul>
 
-        <p><img src="assets/link-vs-button.png" width="587" height="202" alt="Example for using links vs buttons."></p>
-
-        <p>Separate tags from their styling</p>
+        <p class="fragment">Separate tags from their styling</p>
 
         
 
@@ -556,6 +571,50 @@
 
 
       <section>
+        <h2>Videos</h2>
+        <div class="fragment">
+          <ul>
+            <li>Provide <span class="highlight-1">closed captions</span> to describe the <span class="highlight-3">audio</span></li>
+            <li>Provide <span class="highlight-2">audio descriptions</span> to describe the <span class="highlight-3">video</span></li>
+            <li><span class="highlight-4">Subtitles</span> are not sufficient</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Distractions</h2>
+
+        <style>
+          @keyframes distraction {
+            0% { left: 0 }
+            50% { left: calc(100% - 50%) }
+            100% { left: 0; }
+          }
+          .distraction {
+            position: relative;
+            bottom: -100px;
+            animation: distraction 7s ease-in-out infinite;
+            background-color: red;
+            padding-inline: 20px;
+          }
+        </style>
+
+        <span class="distraction">Important!</span>
+
+        <ul class="fragment">
+          <li><span class="highlight-1">Avoid</span> animations</li>
+          <li>Make animations <span class="highlight-2">pausable</span></li>
+          <li>Honor <span class="highlight-3">user settings</span><br>
+            <pre><code class="hljs css">
+@media (prefers-reduced-motion: reduce) { ... }
+            </code></pre>
+          </li>
+        </ul>
+
+
+      </section>
+
+      <section>
         <h2>Tools</h2>
 
         
@@ -583,6 +642,11 @@ $ axe example.com
         <img class="fragment" src="assets/axe-core.png" height="169" width="750">
 
         <p class="fragment">Extensions/plugins available for: Chrome/Firefox, Cypress, Selenium, Storybook, ...</p>
+
+        <p class="fragment">
+          ⇒ <a href="https://darekkay.com/evaluatory/" target="_blank" rel="noopener">Evaluatory</a><br>
+          <small>(my own wrapper around axe-core)</small>
+        </p>
 
         
       </section>
@@ -671,7 +735,7 @@ $ axe example.com
       <section style="font-size: 1.2em;">
         <h2 style="padding-bottom: 25px;">Thank you!</h2>
         <p style="padding-bottom: 20px;">
-          <a href="https://github.com/darekkay/presentations" class="text-nowrap">
+          <a href="https://github.com/darekkay/presentations" class="text-nowrap decoration-none">
             <span class="highlight-1">darekkay.com</span>
             <span> / </span>
             <span class="highlight-2">presentations</span>
@@ -680,7 +744,7 @@ $ axe example.com
         <p style="padding-bottom: 20px;">Dariusz Winkler</p>
         <div class="d-flex justify-center align-center font-2">
           <svg aria-hidden="true" focusable="false" class="icon" style="margin-right: 10px" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path></svg>
-          <a href="https://darekkay.com" target="_blank" rel="noopener" class="monospace">darekkay.com</a>
+          <a href="https://darekkay.com" target="_blank" rel="noopener" class="monospace decoration-none">darekkay.com</a>
         </div>
       </section>
 

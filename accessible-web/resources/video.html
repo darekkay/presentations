@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/examples.css">
+  <title>Video</title>
+  <style>
+    section {
+      margin-bottom: 5rem !important;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="layout-column">
+    <h1>Video</h1>
+
+    <section>
+      <h2>Inaccessible video</h2>
+      <video controls muted>
+        <source src="./assets/video/video-demo.mp4" srclang="en" type="video/mp4">
+      </video>
+    </section>
+
+    <section>
+      <h2>Subtitles</h2>
+      <video controls muted>
+        <source src="./assets/video/video-demo.mp4" srclang="en" type="video/mp4">
+        <track src="./assets/video/video-demo-subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+      </video>
+    </section>
+
+    <section>
+      <h2>Closed captions</h2>
+      <video controls muted>
+        <source src="./assets/video/video-demo.mp4" srclang="en" type="video/mp4">
+        <track src="./assets/video/video-demo-cc.vtt" kind="captions" srclang="en" label="English" default>
+      </video>
+    </section>
+
+    <section>
+      <h2>Audio only</h2>
+      <audio controls>
+        <source src="./assets/video/video-demo.mp4" srclang="en" type="video/mp4">
+      </audio>
+    </section>
+
+    <section>
+      <h2>Audio description</h2>
+      <audio controls>
+        <source src="./assets/video/video-demo.mp4" srclang="en" type="video/mp4">
+        <track src="./assets/video/video-demo-ad.vtt" kind="descriptions" srclang="en" label="English">
+      </audio>
+
+      <details style="width: 300px; margin-top: 1rem;">
+        <summary>Preview</summary>
+
+        A door opens. A decayed room in an abandoned building. Sunlight shines through a window.
+
+      </details>
+    </section>
+  </main>
+</body>
+
+</html>

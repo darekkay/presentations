@@ -2,33 +2,29 @@
  * Light theme
  */
 /* Provides a good contrast against grades < 10 while keeping a "vivid" look */
-/* lato-regular - latin */
+/* nunito regular */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url("./fonts/lato-v23-latin-regular.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-regular.woff2") format("woff2");
 }
-/* lato-italic - latin */
+/* nunito italic */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: italic;
   font-weight: 400;
-  src: local(""), url("./fonts/lato-v23-latin-italic.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-italic.woff2") format("woff2");
 }
-/* lato-700 - latin (mapped to 900) */
+/* nunito bold */
 @font-face {
-  font-family: "Lato";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
-  src: local(""), url("./fonts/lato-v23-latin-900.woff2") format("woff2");
-}
-/* lato-700italic - latin (mapped to 900) */
-@font-face {
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 700;
-  src: local(""), url("./fonts/lato-v23-latin-900italic.woff2") format("woff2");
+  font-display: swap;
+  src: local("Nunito"), url("./fonts/nunito-v16-latin-700.woff2") format("woff2");
 }
 /* oswald-500 - latin */
 @font-face {
@@ -44,6 +40,16 @@
   font-weight: 400;
   src: local(""), url("./fonts/ubuntu-mono-v15-latin-regular.woff2") format("woff2");
 }
+.reveal .progress > span {
+  background: linear-gradient(to right, #ffbe2e, #f1486d);
+}
+
+.reveal .slides img,
+.reveal .slides video {
+  box-shadow: #090c0f 1px 0 10px;
+}
+
+/* #0076d6 */
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff;
 }
@@ -53,7 +59,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 :root {
   --r-background-color: #fff;
-  --r-main-font: Lato, sans-serif;
+  --r-main-font: Nunito, sans-serif;
   --r-main-font-size: 42px;
   --r-main-color: #222;
   --r-block-margin: 20px;
@@ -73,9 +79,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-code-font: Ubuntu Mono, monospace;
   --r-code-inline-font-size: 0.925em;
   --r-code-block-font-size: 1.04em;
-  --r-link-color: #2a76dd;
-  --r-link-color-dark: #1a53a1;
-  --r-link-color-hover: #6ca0e8;
+  --r-link-color: #0076d6;
+  --r-link-color-dark: #004c8a;
+  --r-link-color-hover: #249dff;
   --r-selection-background-color: #89edf6;
   --r-selection-color: #fff;
   --r-horizontal-rule-color: #c6cace;
@@ -352,7 +358,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 .reveal a {
   color: var(--r-link-color);
-  text-decoration: none;
+  text-decoration-style: dashed;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
   transition: color 0.15s ease;
 }
 
@@ -439,18 +447,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: block;
 }
 
-.reveal .red {
-  color: red;
-}
-
-.reveal .green {
-  color: green;
-}
-
-.reveal .orange {
-  color: #f76707;
-}
-
 .reveal .font-1 {
   font-size: 25px;
 }
@@ -467,24 +463,32 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-size: 40px;
 }
 
+.reveal .decoration-none {
+  text-decoration: none;
+}
+
 .bg-highlight {
   background: #ddd;
 }
 
+/* #008817 */
 .highlight-1, mark {
-  color: #f76707;
+  color: #008817;
 }
 
+/* #d72d79 */
 .highlight-2 {
-  color: #1fb714;
+  color: #d72d79;
 }
 
+/* #9355dc */
 .highlight-3 {
-  color: #fb2608;
+  color: #9355dc;
 }
 
+/* #0081a1 */
 .highlight-4 {
-  color: #a36ac7;
+  color: #0081a1;
 }
 
 .border {
